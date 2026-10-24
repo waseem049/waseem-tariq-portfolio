@@ -30,7 +30,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <p>{project.description}</p>
 
         <div className="tag-row">
-          {project.technologies.slice(0, 4).map((tech) => (
+          {project.technologies.map((tech) => (
             <span key={tech} className="tag">{tech}</span>
           ))}
         </div>

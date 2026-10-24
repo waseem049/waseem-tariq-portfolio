@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeading } from "@/components/page-heading";
 import { ProjectArt } from "@/components/project-art";
+import { ScrollAnimate } from "@/components/scroll-animate";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
@@ -12,17 +13,20 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="inner-page container">
-      <PageHeading
-        eyebrow="Selected Work / 01"
-        title="Projects & product work."
-        description="A transparent look at the products I'm building, the engineering problems behind them, and where each project stands today."
-      />
+      <ScrollAnimate direction="up">
+        <PageHeading
+          eyebrow="Selected Work / 01"
+          title="Projects & product work."
+          description="A transparent look at the products I'm building, the engineering problems behind them, and where each project stands today."
+        />
+      </ScrollAnimate>
 
       <div className="project-detail-list">
-        {projects.map((project) => {
+        {projects.map((project, idx) => {
           const isLive = project.status === "Complete & live";
           return (
-            <article className="project-detail" id={project.slug} key={project.slug}>
+            <ScrollAnimate key={project.slug} delay={idx * 60} direction="up">
+              <article className="project-detail" id={project.slug}>
               <div className="project-detail-art">
                 <ProjectArt visual={project.visual} />
               </div>
@@ -76,18 +80,21 @@ export default function ProjectsPage() {
                 </div>
               </div>
             </article>
+          </ScrollAnimate>
           );
         })}
       </div>
 
-      <div className="honesty-note">
-        <span className="note-mark">i</span>
-        <p>
-          <strong>About project status:</strong> statuses describe the current known
-          state, not a claim of production readiness. Live links, repositories,
-          screenshots, and measurable outcomes should be added only after verifying each one.
-        </p>
-      </div>
+      <ScrollAnimate direction="up" delay={200}>
+        <div className="honesty-note">
+          <span className="note-mark">i</span>
+          <p>
+            <strong>About project status:</strong> statuses describe the current known
+            state, not a claim of production readiness. Live links, repositories,
+            screenshots, and measurable outcomes should be added only after verifying each one.
+          </p>
+        </div>
+      </ScrollAnimate>
     </div>
   );
 }
