@@ -9,8 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          '"Plus Jakarta Sans"',
-          "Inter",
+          'var(--font-plus-jakarta)',
           "ui-sans-serif",
           "system-ui",
           "-apple-system",

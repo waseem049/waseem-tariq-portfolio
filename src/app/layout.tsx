@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { profile } from "@/data/profile";
+import { plusJakartaSans, inter } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -73,7 +74,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="apple-touch-icon" href="/favicon.svg" />
         <link rel="alternate" href="https://waseemtariq.vercel.app" hrefLang="en" />
       </head>
-      <body>
+      <body className={`${plusJakartaSans.variable} ${inter.variable}`}>
         <a className="skip-link" href="#main">Skip to content</a>
         <SiteHeader />
         <main id="main">{children}</main>

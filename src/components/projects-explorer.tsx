@@ -60,27 +60,33 @@ export function ProjectsExplorer({ projects }: { projects: Project[] }) {
     });
   }, [projects, activeTab, searchQuery]);
 
+  const liveCount = projects.filter((p) => Boolean(p.liveUrl)).length;
+  const aiCount = projects.filter((p) =>
+    p.technologies.some((t) => /ai|ml|semantic|retrieval/i.test(t)) ||
+    p.slug === "unified-healthcare-interface"
+  ).length;
+
   return (
     <div className="projects-explorer">
       {/* ── METRIC TILES BAR ── */}
       <ScrollAnimate direction="up" delay={50}>
         <div className="projects-metric-bar">
           <div className="metric-tile">
-            <span className="metric-num">07</span>
+            <span className="metric-num">{projects.length.toString().padStart(2, "0")}</span>
             <div className="metric-text">
               <strong>Total Systems</strong>
               <span>Full-stack, APIs &amp; product prototypes</span>
             </div>
           </div>
           <div className="metric-tile">
-            <span className="metric-num">03</span>
+            <span className="metric-num">{liveCount.toString().padStart(2, "0")}</span>
             <div className="metric-text">
               <strong>Live Deployments</strong>
               <span>Linux VPS / Microservices &amp; Vercel</span>
             </div>
           </div>
           <div className="metric-tile">
-            <span className="metric-num">01</span>
+            <span className="metric-num">{aiCount.toString().padStart(2, "0")}</span>
             <div className="metric-text">
               <strong>Applied AI Focus</strong>
               <span>Semantic retrieval &amp; constraint checks</span>

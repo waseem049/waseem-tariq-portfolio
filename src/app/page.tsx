@@ -1,15 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import { ProjectCard } from "@/components/project-card";
 import { ScrollAnimate } from "@/components/scroll-animate";
 import { projects } from "@/data/projects";
 import { profile } from "@/data/profile";
 
 export default function HomePage() {
-  const [photoError, setPhotoError] = useState(false);
-
   return (
     <>
       {/* ── HERO ── */}
@@ -80,21 +77,17 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-[linear-gradient(var(--line)_1px_,transparent_1px)_,linear-gradient(90deg_,var(--line)_1px_,transparent_1px)] bg-[32px_32px] opacity-30" />
               <div className="relative z-10 h-full flex items-center justify-center p-[28px]">
                 <div
-                  className="relative rounded-[28px] overflow-hidden aspect-square bg-[var(--surface-2)] border border-[var(--line)] shadow-md"
+                  className="relative rounded-[28px] overflow-hidden aspect-square bg-[var(--surface-2)] border border-[var(--line)] shadow-md grid place-items-center text-center"
                 >
-                  {photoError ? (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[var(--surface-3)] text-[var(--ink-4)]">
-                      <span className="text-[48px] mb-4">👤</span>
-                      <span className="text-[11px] font-[600] uppercase tracking-[0.1em]">Add /profile.jpg</span>
-                    </div>
-                  ) : (
-                    <img
-                      src="/profile.jpg"
-                      alt="Waseem Tariq"
-                      className="absolute inset-0 w-full h-full object-cover"
-                      onError={() => setPhotoError(true)}
-                    />
-                  )}
+                  <div className="flex flex-col items-center gap-4">
+                    <span className="text-[48px]">💻</span>
+                    <span className="text-[11px] font-[600] uppercase tracking-[0.1em] text-[var(--ink-4)]">
+                      Portfolio placeholder
+                    </span>
+                    <span className="text-[10px] text-[var(--ink-3)]">
+                      Add /public/profile.jpg for a portrait
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
