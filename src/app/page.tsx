@@ -171,7 +171,7 @@ export default function HomePage() {
                 <span className="text-[8px]">•</span>
               </div>
               <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
-                AI &amp; Research (Aspiring)
+                Applied AI Research
               </div>
               <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
                 ML • NLP • Real-world Impact

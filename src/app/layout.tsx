@@ -6,14 +6,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${profile.name} — Software Developer & AI Research Enthusiast`,
+    default: `${profile.name} — Full Stack Java Engineer`,
     template: `%s | ${profile.name}`,
   },
-  description: "Portfolio of Waseem Tariq: software projects, engineering experience, and ongoing research into reliable AI-assisted healthcare service discovery.",
+  description: "Full stack engineer building web products and Spring Boot backends, with ongoing research into reliable AI-assisted healthcare service discovery.",
   metadataBase: new URL("https://example.com"), // Replace with your final domain before launch.
   openGraph: {
-    title: `${profile.name} — Software Developer`,
-    description: "Building useful software and exploring reliable applied AI.",
+    title: `${profile.name} — Full Stack Java Engineer`,
+    description: "Full stack engineer building web products and Spring Boot backends.",
     type: "website",
   },
 };
