@@ -2970,16 +2970,17 @@ img, video { display: block; max-width: 100%; }
    SCROLL REVEAL ANIMATIONS
    ───────────────────────────────────────────────────────── */
 .scroll-reveal {
-  opacity: 0;
+  opacity: 1;
+  transform: none;
   transition: opacity .6s var(--ease-out),
               transform .6s var(--ease-out);
-  will-change: opacity, transform;
+  will-change: auto;
 }
 
-.scroll-reveal--up    { transform: translateY(32px); }
-.scroll-reveal--left  { transform: translateX(-32px); }
-.scroll-reveal--right { transform: translateX(32px); }
-.scroll-reveal--none  { transform: none; }
+.scroll-reveal--up    { transform: translateY(32px); opacity: 0; }
+.scroll-reveal--left  { transform: translateX(-32px); opacity: 0; }
+.scroll-reveal--right { transform: translateX(32px); opacity: 0; }
+.scroll-reveal--none  { transform: none; opacity: 1; }
 
 .scroll-reveal.is-visible {
   opacity: 1;

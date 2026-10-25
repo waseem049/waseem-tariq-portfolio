@@ -79,14 +79,14 @@ export default function ProjectsPage() {
             <h4 className="font-[600] mb-[8px]">Cloudify</h4>
             <p className="text-[13px] text-[var(--ink-3)] mb-[8px]">Cloud storage · Web application · In development</p>
             <p className="text-[14px] leading-[1.7] text-[var(--ink-2)]">A cloud-drive application with account-based access to personal files. The sign-in, password-recovery and account-creation flow is live; file upload, download and sharing are in progress.</p>
-            <p className="text-[13px] text-[var(--ink-3)] mt-[8px]">Stack: [add framework, backend, storage provider] · Vercel</p>
+            <p className="text-[13px] text-[var(--ink-3)] mt-[8px]">Stack: Web application · Account authentication flows · Cloud-storage user experience · Vercel</p>
             <Link href="https://cloudify-gray.vercel.app/login" target="_blank" className="text-[13px] font-[600] text-[var(--accent)]">Live demo →</Link>
           </div>
           <div className="border border-[var(--line)] rounded-[12px] p-[20px] bg-[var(--surface)]">
             <h4 className="font-[600] mb-[8px]">Doclified (DocSign)</h4>
             <p className="text-[13px] text-[var(--ink-3)] mb-[8px]">Document workflows · Electronic signatures · In development</p>
             <p className="text-[14px] leading-[1.7] text-[var(--ink-2)]">A PDF-signing application: upload a PDF, place signature, text and date fields, request signatures from others, download the signed copy, and keep an audit history.</p>
-            <p className="text-[13px] text-[var(--ink-3)] mt-[8px]">Stack: [Next.js / React — confirm] · MongoDB · Vercel</p>
+            <p className="text-[13px] text-[var(--ink-3)] mt-[8px]">Stack: Web application · PDF document workflows · Electronic-signature UX · MongoDB · Vercel</p>
             <Link href="https://doclified.vercel.app/" target="_blank" className="text-[13px] font-[600] text-[var(--accent)]">Live demo →</Link>
           </div>
           <div className="border border-[var(--line)] rounded-[12px] p-[20px] bg-[var(--surface)]">

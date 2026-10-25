@@ -24,7 +24,7 @@ export default function ExperiencePage() {
         <div className="space-y-[32px]">
           <div className="border border-[var(--line)] rounded-[12px] p-[24px] bg-[var(--surface)]">
             <h3 className="text-[18px] font-[700]">Founder & Lead Engineer — NexGen Developers</h3>
-            <p className="text-[13px] text-[var(--ink-3)] mb-[12px]">[Year] – Present</p>
+            <p className="text-[13px] text-[var(--ink-3)] mb-[12px]">Software engineering collaboration · Ongoing</p>
             <p className="text-[14px] leading-[1.7] text-[var(--ink-2)] mb-[12px]">I run a web development studio and lead its engineering work, with a focus on Java and Spring Boot backends.</p>
             <ul className="list-disc pl-[20px] text-[14px] leading-[1.7] text-[var(--ink-2)] space-y-[6px]">
               <li>Designed and implemented a Spring Boot microservices architecture (Spring Cloud Gateway, Eureka service discovery) for the Exceptional IAS Academy platform.</li>
@@ -34,8 +34,8 @@ export default function ExperiencePage() {
           </div>
 
           <div className="border border-[var(--line)] rounded-[12px] p-[24px] bg-[var(--surface)]">
-            <h3 className="text-[18px] font-[700]">Government Service — [Government of Jammu & Kashmir / department name]</h3>
-            <p className="text-[13px] text-[var(--ink-3)] mb-[12px]">[Year] – Present · 5 years</p>
+            <h3 className="text-[18px] font-[700]">Government Service — Government sector</h3>
+            <p className="text-[13px] text-[var(--ink-3)] mb-[12px]">5 years · Current · Non-technical public-sector role</p>
             <p className="text-[14px] leading-[1.7] text-[var(--ink-2)] mb-[12px]">Five years of administrative and data work in a formal, process-driven public-sector environment.</p>
             <ul className="list-disc pl-[20px] text-[14px] leading-[1.7] text-[var(--ink-2)] space-y-[6px]">
               <li>Document generation, data analysis and official correspondence under strict procedure and accountability.</li>
