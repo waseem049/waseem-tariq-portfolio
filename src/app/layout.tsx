@@ -25,8 +25,24 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: profile.name,
+    jobTitle: "Full Stack Java Engineer",
+    url: "https://example.com",
+    email: profile.email,
+    sameAs: [profile.github, profile.linkedin],
+    description: profile.introduction
+  };
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <SiteHeader />

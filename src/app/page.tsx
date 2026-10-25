@@ -29,20 +29,18 @@ export default function HomePage() {
               FULL STACK JAVA ENGINEER
             </div>
 
-            <h1 className="mt-[22px] mb-[18px] text-[clamp(40px,5vw,66px)] font-[800] tracking-[-0.05em] leading-[1.05] text-[var(--ink)] animate-[hero-title-in_.7s_.15s_ease-out_both]">
-              Building Scalable{" "}
+            <h1 className="mt-[24px] mb-[20px] text-[clamp(48px,7vw,80px)] font-[800] tracking-[-0.04em] leading-[1.05] text-[var(--ink)] animate-[hero-title-in_.7s_.15s_ease-out_both]">
+              Building reliable software,{" "}
               <br />
-              Web Solutions
+              from frontend to production.
             </h1>
 
-            <p className="hero-desc max-w-[480px] mb-0 text-[16px] text-[var(--ink-2)] leading-[1.75] animate-[hero-title-in_.7s_.28s_ease-out_both]">
-              with Java &amp; Modern Technologies
+            <p className="hero-desc max-w-[560px] mb-0 text-[18px] text-[var(--ink-2)] leading-[1.7] animate-[hero-title-in_.7s_.28s_ease-out_both]">
+              Full Stack Java Engineer · Software Developer
             </p>
 
-            <p className="mt-[6px] max-w-[480px] text-[14px] text-[var(--ink-3)] leading-[1.75]">
-              I build robust web applications and backend systems with Java, Spring Boot,
-              and modern technologies. Experienced in full-stack development, cloud deployment
-              and solving real-world problems through clean, scalable solutions.
+            <p className="mt-[12px] max-w-[560px] text-[15px] text-[var(--ink-3)] leading-[1.75]">
+              I build practical web products and backend systems with Java, Spring Boot, modern web technologies, and cloud deployment. I’m also exploring reliable AI-assisted healthcare discovery.
             </p>
 
             <div className="hero-actions flex flex-wrap gap-10 mt-[28px] animate-[hero-title-in_.7s_.4s_ease-out_both]">
@@ -117,6 +115,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── SPECIALTIES BAR ── */}
+      <section className="border-y border-[var(--line)] bg-[var(--surface)] py-[14px]">
+        <div className="container flex flex-wrap items-center justify-center gap-x-[32px] gap-y-[8px] text-[12px] font-[500] text-[var(--ink-3)]">
+          <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Java / Spring Boot</span>
+          <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Next.js / React</span>
+          <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>PostgreSQL / Docker</span>
+          <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Cloud Deployment</span>
+          <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Applied AI Research</span>
+        </div>
+      </section>
+
       {/* ── SKILL BANDS ── */}
       <section className="skill-bands section border-b border-[var(--line)] py-[96px] bg-[var(--bg)]">
         <div className="container">
@@ -173,7 +182,7 @@ export default function HomePage() {
       </section>
 
       {/* ── PROJECTS ── */}
-      <section className="section section-border-bottom" id="work">
+      <section className="section section-border-bottom py-[112px]" id="work">
         <div className="container">
           <ScrollAnimate direction="up">
             <div className="section-head">
