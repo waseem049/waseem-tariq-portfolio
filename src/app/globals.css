@@ -190,6 +190,9 @@
   --panel-accent:   var(--color-panel-accent);
   --amber:          var(--color-amber);
   --amber-bg:       var(--color-amber-bg);
+  --surface:        var(--color-surface);
+  --surface-2:      var(--color-surface-2);
+  --surface-3:      var(--color-surface-3);
 }
 
 /* ─────────────────────────────────────────────────────────
