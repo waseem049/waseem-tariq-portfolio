@@ -5,12 +5,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // Tailwind v4: configuration primarily via CSS @theme block
+  // This file is kept for backward compatibility
   theme: {
-    extend: {
-      // Font family uses CSS variable --font-sans
-      // All colors, shadows, radius, animations, keyframes defined in CSS variables
-      // Only keeping content paths and darkMode
-    },
+    extend: {},
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 }
