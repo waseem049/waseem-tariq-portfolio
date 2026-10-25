@@ -29,6 +29,15 @@
   /* Status */
   --color-green:          #16a34a;
   --color-green-bg:       #f0fdf4;
+  --color-amber:          #f59e0b;
+  --color-amber-bg:       #fef3c7;
+  --color-panel:          #f8fafc;
+  --color-panel-2:        #f1f5f9;
+  --color-panel-3:        #e2e8f0;
+  --color-panel-ink:      #0f172a;
+  --color-panel-ink-2:    #475569;
+  --color-panel-ink-3:    #64748b;
+  --color-panel-accent:   #d97706;
 
   /* Shadows */
   --shadow-xs:      0 1px 2px rgba(0,0,0,.06);
@@ -156,6 +165,13 @@
 
 /* Map legacy CSS variable names to CSS module tokens for backward compatibility */
 :root {
+  --bg:             var(--color-bg);
+  --ink:            var(--color-ink);
+  --ink-2:          var(--color-ink-2);
+  --ink-3:          var(--color-ink-3);
+  --ink-4:          var(--color-ink-4);
+  --line:           var(--color-line);
+  --line-2:         var(--color-line-2);
   --accent:         var(--color-accent);
   --accent-2:       var(--color-accent-2);
   --accent-hover:   var(--color-accent-hover);
@@ -163,34 +179,17 @@
   --accent-muted:   var(--color-accent-muted);
   --accent-glow:    var(--color-accent-glow);
   --accent-gradient: var(--color-accent-gradient);
-  --color-green:    var(--color-green);
-  --color-green-bg: var(--color-green-bg);
-  --color-amber:    var(--color-amber);
-  --color-amber-bg: var(--color-amber-bg);
-  --color-panel:    var(--color-panel);
-  --color-panel-2:  var(--color-panel-2);
-  --color-panel-3:  var(--color-panel-3);
-  --color-panel-ink: var(--color-panel-ink);
-  --color-panel-ink-2: var(--color-panel-ink-2);
-  --color-panel-ink-3: var(--color-panel-ink-3);
-  --color-panel-accent: var(--color-panel-accent);
-  --shadow-xs:      var(--shadow-xs);
-  --shadow-sm:      var(--shadow-sm);
-  --shadow-md:      var(--shadow-md);
-  --shadow-lg:      var(--shadow-lg);
-  --shadow-accent:  var(--shadow-accent);
-  --radius-sm:      var(--radius-sm);
-  --radius-md:      var(--radius-md);
-  --radius-lg:      var(--radius-lg);
-  --radius-xl:      var(--radius-xl);
-  --radius-2xl:     var(--radius-2xl);
-  --radius-full:    var(--radius-full);
-  --ease:           var(--ease);
-  --ease-out:       var(--ease-out);
-  --ease-spring:    var(--ease-spring);
-  --dur-fast:       var(--dur-fast);
-  --dur:            var(--dur);
-  --dur-slow:       var(--dur-slow);
+  --green:          var(--color-green);
+  --green-bg:       var(--color-green-bg);
+  --panel:          var(--color-panel);
+  --panel-2:        var(--color-panel-2);
+  --panel-3:        var(--color-panel-3);
+  --panel-ink:      var(--color-panel-ink);
+  --panel-ink-2:    var(--color-panel-ink-2);
+  --panel-ink-3:    var(--color-panel-ink-3);
+  --panel-accent:   var(--color-panel-accent);
+  --amber:          var(--color-amber);
+  --amber-bg:       var(--color-amber-bg);
 }
 
 /* ─────────────────────────────────────────────────────────
