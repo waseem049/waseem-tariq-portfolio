@@ -1,0 +1,6 @@
+{
+    "nvidia-nim.showReasoning": true,
+    "cmake.buildToolArgs": [
+        "build.nvidia.com"
+    ]
+}

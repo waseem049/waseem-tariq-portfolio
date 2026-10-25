@@ -9,7 +9,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="project-card">
       <Link
         className="project-art-link"
-        href={`/projects#${project.slug}`}
+        href={`/projects/${project.slug}`}
         aria-label={`Read about ${project.name}`}
       >
         <ProjectArt visual={project.visual} />
@@ -24,7 +24,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <h3>
-          <Link href={`/projects#${project.slug}`}>{project.name}</Link>
+          <Link href={`/projects/${project.slug}`}>{project.name}</Link>
         </h3>
 
         <p>{project.description}</p>
@@ -36,7 +36,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
 
         <div className="project-card-links">
-          <Link className="text-link" href={`/projects#${project.slug}`}>
+          <Link className="text-link" href={`/projects/${project.slug}`}>
             Explore project <span aria-hidden="true">↗</span>
           </Link>
           {project.liveUrl ? (

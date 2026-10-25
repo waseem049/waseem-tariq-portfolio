@@ -296,10 +296,10 @@ export function ProjectsExplorer({ projects }: { projects: Project[] }) {
 
                         <a
                           className="text-link card-anchor-link"
-                          href={`#${project.slug}`}
-                          title="Copy permalink"
+                          href={`/projects/${project.slug}`}
+                          title="View case study"
                         >
-                          Permalink #
+                          View case study <span aria-hidden="true">→</span>
                         </a>
                       </div>
                     </div>
