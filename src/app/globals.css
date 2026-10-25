@@ -44,7 +44,7 @@
   --panel-ink:      #f8fafc;
   --panel-ink-2:    #cbd5e1;
   --panel-ink-3:    #94a3b8;
-  --panel-accent:   #d97706;
+  --panel-accent:   #60a5fa;
 
   /* Shadows */
   --shadow-xs:      0 1px 2px rgba(0,0,0,.06);
@@ -68,6 +68,51 @@
   --dur-fast: .15s;
   --dur:    .25s;
   --dur-slow: .45s;
+
+  /* ── CSS Module alias tokens (--color-* prefix) ── */
+  --color-bg:             var(--bg);
+  --color-surface:        var(--surface);
+  --color-surface-2:      var(--surface-2);
+  --color-surface-3:      var(--surface-3);
+  --color-ink:            var(--ink);
+  --color-ink-2:          var(--ink-2);
+  --color-ink-3:          var(--ink-3);
+  --color-ink-4:          var(--ink-4);
+  --color-line:           var(--line);
+  --color-line-2:         var(--line-2);
+  --color-accent:         var(--accent);
+  --color-accent-2:       var(--accent-2);
+  --color-accent-hover:   var(--accent-hover);
+  --color-accent-subtle:  var(--accent-subtle);
+  --color-accent-muted:   var(--accent-muted);
+  --color-accent-glow:    var(--accent-glow);
+  --color-accent-gradient: var(--accent-gradient);
+  --color-green:          var(--green);
+  --color-green-bg:       var(--green-bg);
+  --color-panel:          var(--panel);
+  --color-panel-2:        var(--panel-2);
+  --color-panel-3:        var(--panel-3);
+  --color-panel-ink:      var(--panel-ink);
+  --color-panel-ink-2:    var(--panel-ink-2);
+  --color-panel-ink-3:    var(--panel-ink-3);
+  --color-panel-accent:   var(--panel-accent);
+  --color-shadow-xs:      var(--shadow-xs);
+  --color-shadow-sm:      var(--shadow-sm);
+  --color-shadow-md:      var(--shadow-md);
+  --color-shadow-lg:      var(--shadow-lg);
+  --color-shadow-accent:  var(--shadow-accent);
+  --color-radius-sm:      var(--r-sm);
+  --color-radius-md:      var(--r-md);
+  --color-radius-lg:      var(--r-lg);
+  --color-radius-xl:      var(--r-xl);
+  --color-radius-2xl:     var(--r-2xl);
+  --color-radius-full:    var(--r-full);
+  --color-ease:           var(--ease);
+  --color-ease-out:       var(--ease-out);
+  --color-ease-spring:    var(--ease-spring);
+  --color-dur-fast:       var(--dur-fast);
+  --color-dur:            var(--dur);
+  --color-dur-slow:       var(--dur-slow);
 }
 
 /* ─────────────────────────────────────────────────────────
@@ -115,6 +160,51 @@
   --shadow-md:      0 8px 24px rgba(0,0,0,.35), 0 2px 6px rgba(0,0,0,.2);
   --shadow-lg:      0 20px 60px rgba(0,0,0,.5), 0 4px 12px rgba(0,0,0,.25);
   --shadow-accent:  0 8px 32px rgba(245, 158, 11, 0.2);
+
+  /* Dark theme aliases for CSS Modules */
+  --color-bg:             var(--bg);
+  --color-surface:        var(--surface);
+  --color-surface-2:      var(--surface-2);
+  --color-surface-3:      var(--surface-3);
+  --color-ink:            var(--ink);
+  --color-ink-2:          var(--ink-2);
+  --color-ink-3:          var(--ink-3);
+  --color-ink-4:          var(--ink-4);
+  --color-line:           var(--line);
+  --color-line-2:         var(--line-2);
+  --color-accent:         var(--accent);
+  --color-accent-2:       var(--accent-2);
+  --color-accent-hover:   var(--accent-hover);
+  --color-accent-subtle:  var(--accent-subtle);
+  --color-accent-muted:   var(--accent-muted);
+  --color-accent-glow:    var(--accent-glow);
+  --color-accent-gradient: var(--accent-gradient);
+  --color-green:          var(--green);
+  --color-green-bg:       var(--green-bg);
+  --color-panel:          var(--panel);
+  --color-panel-2:        var(--panel-2);
+  --color-panel-3:        var(--panel-3);
+  --color-panel-ink:      var(--panel-ink);
+  --color-panel-ink-2:    var(--panel-ink-2);
+  --color-panel-ink-3:    var(--panel-ink-3);
+  --color-panel-accent:   var(--panel-accent);
+  --color-shadow-xs:      var(--shadow-xs);
+  --color-shadow-sm:      var(--shadow-sm);
+  --color-shadow-md:      var(--shadow-md);
+  --color-shadow-lg:      var(--shadow-lg);
+  --color-shadow-accent:  var(--shadow-accent);
+  --color-radius-sm:      var(--r-sm);
+  --color-radius-md:      var(--r-md);
+  --color-radius-lg:      var(--r-lg);
+  --color-radius-xl:      var(--r-xl);
+  --color-radius-2xl:     var(--r-2xl);
+  --color-radius-full:    var(--r-full);
+  --color-ease:           var(--ease);
+  --color-ease-out:       var(--ease-out);
+  --color-ease-spring:    var(--ease-spring);
+  --color-dur-fast:       var(--dur-fast);
+  --color-dur:            var(--dur);
+  --color-dur-slow:       var(--dur-slow);
 }
 
 /* ─────────────────────────────────────────────────────────
