@@ -94,9 +94,10 @@ export const profile = {
     "Semantic retrieval and applied AI",
     "Reliable healthcare technology",
   ],
-  // Add verified public links before launch. Leave blank if you do not want to publish one.
+  // Add a reviewed PDF under public/ and set resumePath when ready to publish.
+  // Leave undefined to avoid a broken download link.
   email: "wprofessional49@gmail.com",
   github: "https://github.com/waseem049",
   linkedin: "https://linkedin.com/in/waseem049",
-  resumePath: "/resume.pdf", // Add your PDF to public/ before publishing
+  resumePath: undefined,
 };

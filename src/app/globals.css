@@ -2977,10 +2977,12 @@ img, video { display: block; max-width: 100%; }
   will-change: auto;
 }
 
-.scroll-reveal--up    { transform: translateY(32px); opacity: 0; }
-.scroll-reveal--left  { transform: translateX(-32px); opacity: 0; }
-.scroll-reveal--right { transform: translateX(32px); opacity: 0; }
-.scroll-reveal--none  { transform: none; opacity: 1; }
+/* Entrance transform state — applied by JS once the element enters the viewport.
+   Content stays visible by default; animation is progressive enhancement. */
+.scroll-reveal--up    { transform: translateY(32px); }
+.scroll-reveal--left  { transform: translateX(-32px); }
+.scroll-reveal--right { transform: translateX(32px); }
+.scroll-reveal--none  { transform: none; }
 
 .scroll-reveal.is-visible {
   opacity: 1;

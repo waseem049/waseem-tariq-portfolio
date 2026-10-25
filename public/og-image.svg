@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fafafa"/>
+  <text x="600" y="300" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#0a0a0a" text-anchor="middle">Waseem Tariq</text>
+  <text x="600" y="360" font-family="sans-serif" font-size="24" fill="#6b6b6b" text-anchor="middle">Full Stack Java Engineer · Applied AI Research</text>
+  <rect x="540" y="420" width="120" height="40" rx="20" fill="#d97706"/>
+  <text x="600" y="447" font-family="sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">waseemtariq.vercel.app</text>
+</svg>

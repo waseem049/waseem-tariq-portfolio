@@ -36,7 +36,7 @@ module.exports = {
         sm: "0 2px 8px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04)",
         md: "0 8px 24px rgba(0,0,0,.07), 0 2px 6px rgba(0,0,0,.04)",
         lg: "0 20px 60px rgba(0,0,0,.09), 0 4px 12px rgba(0,0,0,.04)",
-        accent: "0 8px 32px rgba(37, 99, 235, 0.16)",
+        accent: "0 8px 32px rgba(217, 119, 6, 0.16)",
       },
       animation: {
         "orb-float": "orb-float 8s ease-in-out infinite",
