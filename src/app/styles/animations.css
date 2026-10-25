@@ -1,0 +1,89 @@
+/* Animations - Keyframes & Transitions */
+
+/* Hero Animations */
+@keyframes orb-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+
+@keyframes orb-float-2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(20px) scale(0.96); }
+}
+
+@keyframes badge-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-title-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .6; transform: scale(.8); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .4; transform: scale(.8); }
+}
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.5s var(--ease-out),
+              transform 0.5s var(--ease-out);
+  will-change: auto;
+}
+
+.scroll-reveal--up    { transform: translateY(24px); opacity: 0; }
+.scroll-reveal--left  { transform: translateX(-24px); opacity: 0; }
+.scroll-reveal--right { transform: translateX(24px); opacity: 0; }
+.scroll-reveal--none  { transform: none; opacity: 1; }
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger Children */
+.stagger-children > *:nth-child(1) { transition-delay: 0ms; }
+.stagger-children > *:nth-child(2) { transition-delay: 80ms; }
+.stagger-children > *:nth-child(3) { transition-delay: 160ms; }
+.stagger-children > *:nth-child(4) { transition-delay: 240ms; }
+.stagger-children > *:nth-child(5) { transition-delay: 320ms; }
+.stagger-children > *:nth-child(6) { transition-delay: 400ms; }
+
+/* Hero Actions Animation */
+.hero-actions {
+  animation: hero-title-in 0.7s 0.4s var(--ease-out) both;
+}
+
+.hero-meta {
+  animation: hero-title-in 0.7s 0.5s var(--ease-out) both;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .scroll-reveal--up,
+  .scroll-reveal--left,
+  .scroll-reveal--right {
+    transform: none;
+    opacity: 1;
+  }
+}

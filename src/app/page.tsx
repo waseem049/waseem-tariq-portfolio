@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ProjectCard } from "@/components/project-card";
-import { ScrollAnimate } from "@/components/scroll-animate";
-import { projects } from "@/data/projects";
-import { profile } from "@/data/profile";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { ProjectCard } from "@/components/projects/ProjectCard";
+import { Badge } from "@/components/ui/Badge";
+import { projects } from "@/content";
+import { profile } from "@/content";
 
 export default function HomePage() {
   return (
@@ -21,47 +22,59 @@ export default function HomePage() {
 
           {/* Left: copy */}
           <div className="hero-copy">
-            <div className="hero-badge inline-flex items-center gap-8 px-[14px] py-[7px] border border-[var(--accent-muted)] rounded-full text-[10px] font-[600] text-[var(--accent)] bg-[var(--accent-subtle)] tracking-[0.06em] uppercase animate-[badge-in_.6s_ease-out_both]">
-              <span className="hero-badge-dot inline-block w-[6px] h-[6px] rounded-full bg-[var(--green)] animate-pulse" />
-              FULL STACK JAVA ENGINEER
-            </div>
+            <ScrollReveal direction="up">
+              <Badge>
+                <span className="hero-badge-dot inline-block w-[6px] h-[6px] rounded-full bg-[var(--green)] animate-pulse" />
+                FULL STACK JAVA ENGINEER
+              </Badge>
+            </ScrollReveal>
 
-            <h1 className="mt-[24px] mb-[20px] text-[clamp(48px,7vw,80px)] font-[800] tracking-[-0.04em] leading-[1.05] text-[var(--ink)] animate-[hero-title-in_.7s_.15s_ease-out_both]">
-              Building reliable software,{" "}
-              <br />
-              from frontend to production.
-            </h1>
+            <ScrollReveal direction="up" delay={100}>
+              <h1 className="mt-[24px] mb-[20px] text-[clamp(48px,7vw,80px)] font-[800] tracking-[-0.04em] leading-[1.05] text-[var(--ink)]">
+                Building reliable software,{" "}
+                <br />
+                from frontend to production.
+              </h1>
+            </ScrollReveal>
 
-            <p className="hero-desc max-w-[560px] mb-0 text-[18px] text-[var(--ink-2)] leading-[1.7] animate-[hero-title-in_.7s_.28s_ease-out_both]">
-              Full Stack Java Engineer · Software Developer
-            </p>
+            <ScrollReveal direction="up" delay={200}>
+              <p className="hero-desc max-w-[560px] mb-0 text-[18px] text-[var(--ink-2)] leading-[1.7]">
+                Full Stack Java Engineer · Software Developer
+              </p>
+            </ScrollReveal>
 
-            <p className="mt-[12px] max-w-[560px] text-[15px] text-[var(--ink-3)] leading-[1.75]">
-              I build practical web products and backend systems with Java, Spring Boot, modern web technologies, and cloud deployment. I’m also exploring reliable AI-assisted healthcare discovery.
-            </p>
+            <ScrollReveal direction="up" delay={300}>
+              <p className="mt-[12px] max-w-[560px] text-[15px] text-[var(--ink-3)] leading-[1.75]">
+                I build practical web products and backend systems with Java, Spring Boot, modern web technologies, and cloud deployment. I'm also exploring reliable AI-assisted healthcare discovery.
+              </p>
+            </ScrollReveal>
 
-            <div className="hero-actions flex flex-wrap gap-10 mt-[28px] animate-[hero-title-in_.7s_.4s_ease-out_both]">
-              <Link
-                className="btn btn-primary inline-flex items-center gap-8 h-[42px] px-[20px] rounded-[20px] bg-[var(--ink)] text-[var(--bg)] font-[600] text-[13px] shadow-sm hover:-translate-y-[2px] transition-all duration-150 ease-spring"
-                href="/projects"
-              >
-                View My Projects <span aria-hidden="true">→</span>
-              </Link>
-              {profile.resumePath ? (
-                <a
-                  className="btn btn-ghost inline-flex items-center gap-8 h-[42px] px-[20px] rounded-[20px] border border-[var(--line-2)] text-[var(--ink-2)] bg-transparent font-[600] text-[13px] hover:bg-[var(--surface-2)] hover:text-[var(--ink)] transition-all duration-150 ease-in-out"
-                  href={profile.resumePath}
-                  download
+            <ScrollReveal direction="up" delay={400}>
+              <div className="hero-actions flex flex-wrap gap-10 mt-[28px]">
+                <Link
+                  className="btn btn-primary inline-flex items-center gap-8 h-[42px] px-[20px] rounded-[20px] bg-[var(--ink)] text-[var(--bg)] font-[600] text-[13px] shadow-sm hover:-translate-y-[2px] transition-all duration-150 ease-spring"
+                  href="/projects"
                 >
-                  Download Resume <span aria-hidden="true">↓</span>
-                </a>
-              ) : null}
-            </div>
+                  View My Projects <span aria-hidden="true">→</span>
+                </Link>
+                {profile.resumePath ? (
+                  <a
+                    className="btn btn-ghost inline-flex items-center gap-8 h-[42px] px-[20px] rounded-[20px] border border-[var(--line-2)] text-[var(--ink-2)] bg-transparent font-[600] text-[13px] hover:bg-[var(--surface-2)] hover:text-[var(--ink)] transition-all duration-150 ease-in-out"
+                    href={profile.resumePath}
+                    download
+                  >
+                    Download Resume <span aria-hidden="true">↓</span>
+                  </a>
+                ) : null}
+              </div>
+            </ScrollReveal>
 
-            <div className="hero-meta flex items-center gap-8 mt-[36px] text-[11px] text-[var(--ink-4)] animate-[hero-title-in_.7s_.5s_ease-out_both]">
-              <span className="hero-meta-line w-[24px] h-[1px] bg-[var(--line-2)]" />
-              Building at the intersection of software and AI.
-            </div>
+            <ScrollReveal direction="up" delay={500}>
+              <div className="hero-meta flex items-center gap-8 mt-[36px] text-[11px] text-[var(--ink-4)]">
+                <span className="hero-meta-line w-[24px] h-[1px] bg-[var(--line-2)]" />
+                Building at the intersection of software and AI.
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Right: visual */}
@@ -177,7 +190,7 @@ export default function HomePage() {
       {/* ── PROJECTS ── */}
       <section className="section section-border-bottom py-[112px]" id="work">
         <div className="container">
-          <ScrollAnimate direction="up">
+          <ScrollReveal direction="up">
             <div className="section-head">
               <div>
                 <span className="eyebrow">
@@ -199,13 +212,13 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-          </ScrollAnimate>
+          </ScrollReveal>
 
           <div className="projects-grid">
             {projects.map((project, idx) => (
-              <ScrollAnimate key={project.slug} delay={idx * 70} direction="up">
+              <ScrollReveal key={project.slug} delay={idx * 70} direction="up">
                 <ProjectCard project={project} />
-              </ScrollAnimate>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -214,7 +227,7 @@ export default function HomePage() {
       {/* ── RESEARCH ── */}
       <section className="research-section">
         <div className="container research-grid">
-          <ScrollAnimate direction="left">
+          <ScrollReveal direction="left">
             <div className="research-copy">
               <span className="eyebrow">
                 <span className="eyebrow-dot" />
@@ -240,9 +253,9 @@ export default function HomePage() {
                 Read the research outline <span aria-hidden="true">↗</span>
               </Link>
             </div>
-          </ScrollAnimate>
+          </ScrollReveal>
 
-          <ScrollAnimate direction="right" delay={100}>
+          <ScrollReveal direction="right" delay={100}>
             <div className="research-diagram" aria-label="Illustration of the proposed research workflow">
               <div className="diagram-heading">
                 <span>Proposed Workflow</span>
@@ -288,14 +301,14 @@ export default function HomePage() {
                 <span>Not a Clinical System</span>
               </div>
             </div>
-          </ScrollAnimate>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── HOW I WORK ── */}
       <section className="section section-border-top section-border-bottom">
         <div className="container approach-grid">
-          <ScrollAnimate direction="left">
+          <ScrollReveal direction="left">
             <div>
               <span className="eyebrow">
                 <span className="eyebrow-dot" />
@@ -306,10 +319,10 @@ export default function HomePage() {
                 <em>Practical by design.</em>
               </h2>
             </div>
-          </ScrollAnimate>
+          </ScrollReveal>
 
           <div className="approach-list">
-            <ScrollAnimate direction="up" delay={0}>
+            <ScrollReveal direction="up" delay={0}>
               <div className="approach-item">
                 <span className="approach-num">01</span>
                 <div>
@@ -317,8 +330,8 @@ export default function HomePage() {
                   <p>Turn requirements into usable interfaces, application flows, and working software.</p>
                 </div>
               </div>
-            </ScrollAnimate>
-            <ScrollAnimate direction="up" delay={100}>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={100}>
               <div className="approach-item">
                 <span className="approach-num">02</span>
                 <div>
@@ -326,8 +339,8 @@ export default function HomePage() {
                   <p>Think through APIs, data models, service boundaries, and deployment—not just the UI.</p>
                 </div>
               </div>
-            </ScrollAnimate>
-            <ScrollAnimate direction="up" delay={200}>
+            </ScrollReveal>
+            <ScrollReveal direction="up" delay={200}>
               <div className="approach-item">
                 <span className="approach-num">03</span>
                 <div>
@@ -335,7 +348,7 @@ export default function HomePage() {
                   <p>Use clear baselines and defined metrics when exploring AI-assisted approaches.</p>
                 </div>
               </div>
-            </ScrollAnimate>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -343,7 +356,7 @@ export default function HomePage() {
       {/* ── CONTACT BAND ── */}
       <section className="contact-band">
         <div className="container">
-          <ScrollAnimate direction="up">
+          <ScrollReveal direction="up">
             <div className="contact-band-inner">
               <div>
                 <span className="eyebrow">
@@ -360,7 +373,7 @@ export default function HomePage() {
                 Get in touch <span aria-hidden="true">↗</span>
               </Link>
             </div>
-          </ScrollAnimate>
+          </ScrollReveal>
         </div>
       </section>
     </>

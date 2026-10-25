@@ -1,0 +1,30 @@
+.projectArt {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink-3);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.visualContent {
+  text-align: center;
+}
+
+.visualIcon {
+  font-size: 48px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.visualLabel {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 10px;
+  font-weight: 600;
+}

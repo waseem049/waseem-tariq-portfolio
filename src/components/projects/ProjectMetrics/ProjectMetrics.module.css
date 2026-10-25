@@ -1,0 +1,59 @@
+.metricsBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.metricTile {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+
+.metricTile:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-line-2);
+  box-shadow: var(--shadow-sm);
+}
+
+.metricNum {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--color-accent);
+  line-height: 1;
+  font-family: var(--font-mono);
+}
+
+.metricText {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricText strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+}
+
+.metricText span {
+  font-size: 11px;
+  color: var(--color-ink-3);
+  line-height: 1.4;
+}
+
+@media (max-width: 960px) {
+  .metricsBar {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,28 @@
+/* Main Styles Index - Imports all CSS modules in correct order */
+
+/* 1. Design Tokens - MUST be first */
+@import './tokens.css';
+
+/* 2. Base Styles - Reset, Typography, Links */
+@import './base.css';
+
+/* 2b. Typography */
+@import './typography.css';
+
+/* 3. Layout Utilities */
+@import './layout.css';
+
+/* 4. Component Styles */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/badges.css';
+@import './components/forms.css';
+
+/* 5. Animations */
+@import './animations.css';
+
+/* 6. Responsive */
+@import './responsive.css';
+
+/* 7. Page-Specific Styles (if any) */
+/* These can be added as needed for specific page layouts */

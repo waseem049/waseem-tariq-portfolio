@@ -1,0 +1,145 @@
+/* Typography System */
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+.eyebrow-dot,
+.eyebrow i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 6px var(--color-accent-glow);
+  flex-shrink: 0;
+}
+
+/* Heading Scales */
+h1, .h1 {
+  font-size: clamp(40px, 5vw, 66px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  color: var(--color-ink);
+}
+
+h2, .h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  color: var(--color-ink);
+}
+
+h3, .h3 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+
+h4, .h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+/* Text Variants */
+.hero-desc {
+  max-width: 480px;
+  font-size: 16px;
+  color: var(--color-ink-2);
+  line-height: 1.75;
+}
+
+.body-text {
+  font-size: 14px;
+  color: var(--color-ink-2);
+  line-height: 1.75;
+}
+
+.small-text {
+  font-size: 13px;
+  color: var(--color-ink-3);
+  line-height: 1.7;
+}
+
+.muted-text {
+  font-size: 12px;
+  color: var(--color-ink-4);
+}
+
+.caption {
+  font-size: 11px;
+  color: var(--color-ink-3);
+  line-height: 1.6;
+}
+
+.eyebrow-text {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+}
+
+/* Links */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-ink-2);
+  position: relative;
+  transition: color var(--dur-fast) var(--ease), gap var(--dur-fast) var(--ease);
+}
+
+.text-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-accent-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur) var(--ease);
+}
+
+.text-link:hover {
+  color: var(--color-accent);
+  gap: 9px;
+}
+
+.text-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Emphasis */
+em {
+  font-style: normal;
+  color: var(--color-ink-3);
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--color-ink);
+}

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeading } from "@/components/page-heading";
-import { ScrollAnimate } from "@/components/scroll-animate";
-import { ProjectsExplorer } from "@/components/projects-explorer";
-import { projects } from "@/data/projects";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { ProjectsExplorer } from "@/components/projects";
 
 export const metadata: Metadata = {
   title: "Projects | Waseem Tariq",
@@ -12,17 +11,17 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="inner-page container">
-      <ScrollAnimate direction="up">
+      <ScrollReveal direction="up">
         <PageHeading
           eyebrow="Projects"
           title="Projects & product work."
           description="Products I've built and shipped, the engineering behind them, and what I'm working on now."
         />
-      </ScrollAnimate>
+      </ScrollReveal>
 
-      <ScrollAnimate direction="up" delay={80}>
-        <ProjectsExplorer projects={projects} />
-      </ScrollAnimate>
+      <ScrollReveal direction="up" delay={80}>
+        <ProjectsExplorer />
+      </ScrollReveal>
     </div>
   );
 }

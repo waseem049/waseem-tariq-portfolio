@@ -1,0 +1,98 @@
+/* Status Badges */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--color-surface-2);
+  color: var(--color-ink-3);
+  border: 1px solid var(--color-line);
+}
+
+.status i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-ink-4);
+  flex-shrink: 0;
+}
+
+.status-live {
+  background: var(--color-green-bg);
+  color: var(--color-green);
+  border-color: transparent;
+}
+
+.status-live i {
+  background: var(--color-green);
+  animation: pulse 2s infinite;
+}
+
+.status-progress {
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  border-color: transparent;
+}
+
+.status-progress i {
+  background: var(--color-accent);
+}
+
+.status-neutral {
+  background: var(--color-surface-2);
+  color: var(--color-ink-3);
+  border: 1px solid var(--color-line);
+}
+
+.status-progress i {
+  background: var(--color-ink-4);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .6; transform: scale(.8); }
+}
+
+/* Hero Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border: 1px solid var(--color-accent-muted);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  animation: badge-in 0.6s var(--ease-out) both;
+}
+
+@keyframes badge-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-green);
+  animation: pulse 2s infinite;
+}
+
+/* Status with pulse for research */
+.status-progress i {
+  animation: pulse 2s infinite;
+}
+
+.research-status .status i {
+  background: var(--color-accent);
+  animation: pulse 2s infinite;
+}
