@@ -72,6 +72,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
         <link rel="icon" href="/favicon.svg" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="alternate" href="https://waseemtariq.vercel.app" hrefLang="en" />
       </head>
       <body className={`${plusJakartaSans.variable} ${inter.variable}`}>
