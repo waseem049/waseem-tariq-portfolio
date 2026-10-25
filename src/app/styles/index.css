@@ -24,5 +24,5 @@
 /* 6. Responsive */
 @import './responsive.css';
 
-/* 7. Page-Specific Styles (if any) */
-/* These can be added as needed for specific page layouts */
+/* 7. Page-Specific Styles */
+@import './pages.css';
