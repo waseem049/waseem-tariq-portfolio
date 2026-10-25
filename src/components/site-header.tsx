@@ -6,11 +6,10 @@ import { useState, useEffect } from "react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
   { href: "/research", label: "Research" },
+  { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
