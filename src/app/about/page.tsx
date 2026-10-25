@@ -68,14 +68,14 @@ export default function AboutPage() {
           <ScrollAnimate direction="right" delay={140}>
             <div className="sidebar-card">
               <span className="sidebar-label">Education</span>
-              <h3>{profile.education.degree}</h3>
-              <p>{profile.education.institution}</p>
+              <h3>{profile.education[0].degree}</h3>
+              <p>{profile.education[0].institution}</p>
               <span className="status status-progress">
-                <i />{profile.education.status}
+                <i />{profile.education[0].status}
               </span>
               <div className="sidebar-divider" />
               <span className="sidebar-label">Expected Completion</span>
-              <strong>{profile.education.expectedCompletion}</strong>
+              <strong>{profile.education[0].period}</strong>
             </div>
           </ScrollAnimate>
 

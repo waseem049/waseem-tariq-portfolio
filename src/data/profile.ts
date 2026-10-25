@@ -98,5 +98,5 @@ export const profile = {
   email: "wprofessional49@gmail.com",
   github: "https://github.com/waseem049",
   linkedin: "https://linkedin.com/in/waseem049",
-  resumePath: "", // e.g. "/resume.pdf" after adding your PDF to public/
+  resumePath: "/resume.pdf", // Add your PDF to public/ before publishing
 };

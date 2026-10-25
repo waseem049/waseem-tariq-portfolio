@@ -1,94 +1,173 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { ProjectCard } from "@/components/project-card";
 import { ScrollAnimate } from "@/components/scroll-animate";
 import { projects } from "@/data/projects";
 import { profile } from "@/data/profile";
 
 export default function HomePage() {
+  const [photoError, setPhotoError] = useState(false);
+
   return (
     <>
       {/* ── HERO ── */}
-      <section className="hero-section">
-        <div className="container hero-grid">
+      <section className="hero-section relative overflow-hidden border-b border-[var(--line)] bg-[var(--bg)]">
+        {/* Ambient gradient orb */}
+        <div className="absolute top-[-200px] right-[-150px] w-[600px] h-[600px] bg-[radial-gradient(circle,_rgba(79,70,229,0.08)_0%_,_transparent_65%)] pointer-events-none animate-[orb-float_8s_ease-in-out_infinite]" />
+
+        {/* Subtle grid background */}
+        <div className="absolute inset-0 bg-[linear-gradient(var(--line)_1px_,transparent_1px)_,linear-gradient(90deg_,var(--line)_1px_,transparent_1px)] bg-[48px_48px] opacity-45 mask-[radial-gradient(ellipse_80%_60%_at_80%_40%_,_black_0%_,_transparent_70%)] pointer-events-none" />
+
+        <div className="container hero-grid grid-cols-[1fr_1fr] items-center gap-[clamp(40px,7vw,100px)] min-h-[600px] px-0 py-[80px]_88px">
+
           {/* Left: copy */}
           <div className="hero-copy">
-            <div className="hero-badge">
-              <span className="hero-badge-dot" />
-              Software Development · Applied AI
+            <div className="hero-badge inline-flex items-center gap-8 px-[14px] py-[7px] border border-[var(--accent-muted)] rounded-full text-[10px] font-[600] text-[var(--accent)] bg-[var(--accent-subtle)] tracking-[0.06em] uppercase animate-[badge-in_.6s_ease-out_both]">
+              <span className="hero-badge-dot inline-block w-[6px] h-[6px] rounded-full bg-[var(--green)] animate-pulse" />
+              FULL STACK JAVA ENGINEER
             </div>
 
-            <h1>
-              Building useful software.<br />
-              <em>Exploring intelligent systems.</em>
+            <h1 className="mt-[22px] mb-[18px] text-[clamp(40px,5vw,66px)] font-[800] tracking-[-0.05em] leading-[1.05] text-[var(--ink)] animate-[hero-title-in_.7s_.15s_ease-out_both]">
+              Building Scalable{" "}
+              <br />
+              Web Solutions
             </h1>
 
-            <p className="hero-desc">
-              I&apos;m {profile.name}, a software developer focused on practical web
-              products, dependable backend systems, and AI that helps people find
-              the right information.
+            <p className="hero-desc max-w-[480px] mb-0 text-[16px] text-[var(--ink-2)] leading-[1.75] animate-[hero-title-in_.7s_.28s_ease-out_both]">
+              with Java &amp; Modern Technologies
             </p>
 
-            <div className="hero-actions">
-              <Link className="btn btn-primary" href="/projects">
-                Explore my work <span aria-hidden="true">↗</span>
+            <p className="mt-[6px] max-w-[480px] text-[14px] text-[var(--ink-3)] leading-[1.75]">
+              I build robust web applications and backend systems with Java, Spring Boot,
+              and modern technologies. Experienced in full-stack development, cloud deployment
+              and solving real-world problems through clean, scalable solutions.
+            </p>
+
+            <div className="hero-actions flex flex-wrap gap-10 mt-[28px] animate-[hero-title-in_.7s_.4s_ease-out_both]">
+              <Link
+                className="btn btn-primary inline-flex items-center gap-8 h-[42px] px-[20px] rounded-[20px] bg-[var(--ink)] text-[var(--bg)] font-[600] text-[13px] shadow-sm hover:-translate-y-[2px] transition-all duration-150 ease-spring"
+                href="/projects"
+              >
+                View My Projects <span aria-hidden="true">→</span>
               </Link>
-              <Link className="btn btn-secondary" href="/research">
-                Research direction <span aria-hidden="true">→</span>
-              </Link>
+              {profile.resumePath ? (
+                <a
+                  className="btn btn-ghost inline-flex items-center gap-8 h-[42px] px-[20px] rounded-[20px] border border-[var(--line-2)] text-[var(--ink-2)] bg-transparent font-[600] text-[13px] hover:bg-[var(--surface-2)] hover:text-[var(--ink)] transition-all duration-150 ease-in-out"
+                  href={profile.resumePath}
+                  download
+                >
+                  Download Resume <span aria-hidden="true">↓</span>
+                </a>
+              ) : null}
             </div>
 
-            <div className="hero-meta">
-              <span className="hero-meta-line" />
+            <div className="hero-meta flex items-center gap-8 mt-[36px] text-[11px] text-[var(--ink-4)] animate-[hero-title-in_.7s_.5s_ease-out_both]">
+              <span className="hero-meta-line w-[24px] h-[1px] bg-[var(--line-2)]" />
               Building at the intersection of software and AI.
             </div>
           </div>
 
           {/* Right: visual */}
-          <div className="hero-visual-wrap">
-            <div className="hero-visual-label">
-              <span>Selected System Study</span>
+          <div className="hero-visual-wrap relative">
+            <div className="hero-visual-label flex justify-between items-center mb-[10px] text-[9px] font-[600] tracking-[0.1em] uppercase text-[var(--ink-4)]">
+              <span>Code</span>
               <span>Fig. 01</span>
             </div>
 
-            <div className="hero-visual" aria-hidden="true">
-              <div className="hero-visual-grid" />
-              <div className="hero-visual-inner">
-                <div className="hero-stat-card">
-                  <div className="hero-stat-label">Current focus</div>
-                  <div className="hero-stat-value">6</div>
-                  <div className="hero-stat-sub">Projects in active development</div>
-                </div>
-
-                <div className="hero-visual-flow">
-                  <div className="flow-item">
-                    <span className="flow-item-num">01</span>
-                    Understand the problem
-                  </div>
-                  <div className="flow-arrow" />
-                  <div className="flow-item">
-                    <span className="flow-item-num">02</span>
-                    Design the system
-                  </div>
-                  <div className="flow-arrow" />
-                  <div className="flow-item">
-                    <span className="flow-item-num">03</span>
-                    Test the outcome
-                  </div>
+            <div
+              className="hero-visual relative overflow-hidden border border-[var(--line)] rounded-[14px] bg-[var(--surface)] aspect-[4/3] max-h-[400px] shadow-md"
+            >
+              <div className="absolute inset-0 bg-[linear-gradient(var(--line)_1px_,transparent_1px)_,linear-gradient(90deg_,var(--line)_1px_,transparent_1px)] bg-[32px_32px] opacity-30" />
+              <div className="relative z-10 h-full flex items-center justify-center p-[28px]">
+                <div
+                  className="relative rounded-[28px] overflow-hidden aspect-square bg-[var(--surface-2)] border border-[var(--line)] shadow-md"
+                >
+                  {photoError ? (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[var(--surface-3)] text-[var(--ink-4)]">
+                      <span className="text-[48px] mb-4">👤</span>
+                      <span className="text-[11px] font-[600] uppercase tracking-[0.1em]">Add /profile.jpg</span>
+                    </div>
+                  ) : (
+                    <img
+                      src="/profile.jpg"
+                      alt="Waseem Tariq"
+                      className="absolute inset-0 w-full h-full object-cover"
+                      onError={() => setPhotoError(true)}
+                    />
+                  )}
                 </div>
               </div>
             </div>
 
-            <div className="hero-visual-caption">
-              <span>Engineering with intent</span>
-              <span>Research in progress ↗</span>
+            <div className="hero-visual-caption flex justify-between mt-[10px] text-[9px] font-[600] tracking-[0.08em] uppercase text-[var(--ink-4)]">
+              <span>Build</span>
+              <span>Improve</span>
             </div>
           </div>
+
         </div>
 
-        <div className="hero-rule">
-          <div className="container hero-rule-inner">
+        <div className="hero-rule border-t border-[var(--line)] bg-[var(--surface-2)]">
+          <div className="container hero-rule-inner flex justify-between items-center px-[12px] text-[9px] font-[600] tracking-[0.1em] uppercase text-[var(--ink-4)]">
             <span>Selected work &amp; research</span>
             <span>Scroll to explore ↓</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SKILL BANDS ── */}
+      <section className="skill-bands section border-b border-[var(--line)] py-[96px] bg-[var(--bg)]">
+        <div className="container">
+          <div className="skill-grid grid-cols-[repeat(4,minmax(0,1fr))] gap-[24px]">
+            <div className="skill-card p-[20px] rounded-[14px] border border-[var(--line)] bg-[var(--surface)] shadow-sm hover:shadow-md hover:border-[var(--line-2)] transition-all duration-250 ease-in-out group">
+              <div className="skill-icon inline-flex items-center justify-center w-[10px] h-[10px] rounded-full bg-[var(--accent)] text-white mb-[4px] group-hover:shadow-[0_0_8px_var(--accent-glow)] transition-shadow duration-250">
+                <span className="text-[8px]">•</span>
+              </div>
+              <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
+                Full Stack Development
+              </div>
+              <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
+                Java • Spring Boot • React • Next.js
+              </div>
+            </div>
+
+            <div className="skill-card p-[20px] rounded-[14px] border border-[var(--line)] bg-[var(--surface)] shadow-sm hover:shadow-md hover:border-[var(--line-2)] transition-all duration-250 ease-in-out group">
+              <div className="skill-icon inline-flex items-center justify-center w-[10px] h-[10px] rounded-full bg-[var(--accent)] text-white mb-[4px] group-hover:shadow-[0_0_8px_var(--accent-glow)] transition-shadow duration-250">
+                <span className="text-[8px]">•</span>
+              </div>
+              <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
+                Cloud &amp; DevOps
+              </div>
+              <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
+                Docker • Nginx • VPS Deployment
+              </div>
+            </div>
+
+            <div className="skill-card p-[20px] rounded-[14px] border border-[var(--line)] bg-[var(--surface)] shadow-sm hover:shadow-md hover:border-[var(--line-2)] transition-all duration-250 ease-in-out group">
+              <div className="skill-icon inline-flex items-center justify-center w-[10px] h-[10px] rounded-full bg-[var(--accent)] text-white mb-[4px] group-hover:shadow-[0_0_8px_var(--accent-glow)] transition-shadow duration-250">
+                <span className="text-[8px]">•</span>
+              </div>
+              <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
+                Database
+              </div>
+              <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
+                PostgreSQL • MySQL
+              </div>
+            </div>
+
+            <div className="skill-card p-[20px] rounded-[14px] border border-[var(--line)] bg-[var(--surface)] shadow-sm hover:shadow-md hover:border-[var(--line-2)] transition-all duration-250 ease-in-out group">
+              <div className="skill-icon inline-flex items-center justify-center w-[10px] h-[10px] rounded-full bg-[var(--accent)] text-white mb-[4px] group-hover:shadow-[0_0_8px_var(--accent-glow)] transition-shadow duration-250">
+                <span className="text-[8px]">•</span>
+              </div>
+              <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
+                AI &amp; Research (Aspiring)
+              </div>
+              <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
+                ML • NLP • Real-world Impact
+              </div>
+            </div>
           </div>
         </div>
       </section>
