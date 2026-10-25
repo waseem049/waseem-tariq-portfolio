@@ -6,6 +6,7 @@ import { SkipLink } from '@/components/layout/SkipLink'
 import { plusJakartaSans, inter } from '@/lib/fonts'
 import { profile } from '@/content'
 import './styles/index.css'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: {
