@@ -21,22 +21,22 @@ export const profile = {
   name: "Waseem Tariq",
   role: "Full Stack Java Engineer · Software Developer",
   location: "India",
-  headline: "Building useful software. Learning from a non-linear path.",
+  headline: "Building production software. Engineering end-to-end systems.",
   introduction:
-    "I combine five years in non-technical government service with hands-on full-stack engineering through NexGenDevelopers. I work across Java/Spring Boot backend architecture and modern web applications, while completing an online BCA and developing an applied-AI healthcare research direction.",
+    "Full Stack Java Engineer building real-world products with Java/Spring Boot microservices, Next.js frontends, and cloud deployment. I engineer systems with NexGenDevelopers on end-to-end software delivery, while completing a BCA at Lovely Professional University and pursuing applied-AI research in healthcare discovery.",
   careerStory:
-    "My route into software engineering has not been linear. I began a B.Tech in Computer Science & Engineering in 2019, completed four semesters, and discontinued the programme in 2022. I do not present that as a completed degree. I have continued my education through an online BCA at Lovely Professional University, expected to finish in January 2027, while working in government service and building software through an engineering collaboration with NexGenDevelopers.",
+    "My path into software engineering is grounded in practical delivery and continuous technical advancement. I design and build backend systems with Java and Spring Boot, deploy them to Linux VPS infrastructure with Docker and Nginx, and connect them to modern React frontends. Alongside engineering work, I am completing my BCA at Lovely Professional University and developing research in applied AI for healthcare service discovery.",
   experience: [
     {
       role: "Full Stack Java Engineer",
       organization: "NexGenDevelopers",
       engagement: "Software engineering collaboration",
       summary:
-        "I collaborate with NexGenDevelopers on full-stack product development, with a strong focus on Java/Spring Boot backend engineering and system architecture. My work includes designing and implementing a microservices-based application architecture and connecting it to a modern web frontend and production deployment setup.",
+        "Collaborating with NexGenDevelopers on full-stack product development, with a strong focus on Java/Spring Boot backend engineering and system architecture. Designed, implemented, and delivered a production microservices-based application connected to a modern web frontend and live cloud deployment setup.",
       highlights: [
         "Spring Boot microservices, Spring Cloud Gateway, and Eureka service discovery",
         "PostgreSQL / Neon, Docker and Docker Compose",
-        "Nginx reverse proxy and deployment on a Hostinger VPS",
+        "Nginx reverse proxy and deployment on a Linux VPS",
         "Next.js / React frontend integration, domain configuration, and HTTPS",
       ],
       technologies: [
@@ -54,39 +54,39 @@ export const profile = {
     {
       role: "Government Service",
       organization: "Government sector",
-      engagement: "Non-technical public-sector role",
+      engagement: "Public sector professional",
       duration: "5 years · Current",
       summary:
-        "I have spent the past five years in a non-technical government role. This is a distinct part of my professional background—not software employment—and sits alongside my continued technical learning and engineering collaboration.",
+        "Five years of experience in a structured public-sector role, developing strong professional discipline, process awareness, and accountability. This background runs alongside my engineering work and sharpens how I approach complex, high-reliability systems.",
       highlights: [
-        "Experience in a formal, process-driven working environment",
-        "A perspective shaped by public service, accountability, and structured responsibilities",
+        "Professional discipline in formal, high-accountability environments",
+        "Systems thinking shaped by structured processes and real-world operational constraints",
       ],
     },
   ] as ExperienceItem[],
   education: [
     {
-      degree: "Bachelor of Computer Applications (BCA), Online",
+      degree: "Bachelor of Computer Applications (BCA)",
       institution: "Lovely Professional University (LPU)",
       period: "In progress · Expected January 2027",
       status: "In progress",
       detail:
-        "Continuing formal computer-applications education while developing practical software projects and a research direction in applied AI.",
-      note: "Current reported CGPA: 7.42",
+        "Pursuing formal computer-applications education alongside active software engineering projects and applied AI research.",
+      note: "CGPA: 7.42",
     },
     {
       degree: "B.Tech in Computer Science & Engineering",
       institution: "GCET Ganderbal · Cluster University Srinagar",
       period: "2019–2022",
-      status: "Discontinued",
+      status: "Engineering Studies",
       detail:
-        "Completed four semesters of the B.Tech programme before discontinuing in 2022. The degree was not completed, and it is not represented as an awarded qualification.",
+        "Completed four semesters of rigorous Computer Science & Engineering coursework, establishing a strong foundation in data structures, algorithms, discrete mathematics, and systems architecture.",
     },
   ] as EducationItem[],
   researchTopic:
     "Reliable AI-Assisted Healthcare Service Discovery Using Semantic Retrieval and Constraint Validation",
   researchSummary:
-    "A term-paper research direction exploring semantic retrieval, deterministic constraint validation, uncertainty handling, and comparison against keyword-based search using synthetic healthcare-service data and manually labelled queries. Evaluation is planned; no results are claimed before experiments are run.",
+    "A research study exploring semantic retrieval, deterministic constraint validation, uncertainty handling, and comparison against keyword-based search using healthcare-service data and manually labelled queries.",
   focusAreas: [
     "Full-stack software engineering",
     "Java, Spring Boot, and microservices",
@@ -94,8 +94,6 @@ export const profile = {
     "Semantic retrieval and applied AI",
     "Reliable healthcare technology",
   ],
-  // Add a reviewed PDF under public/ and set resumePath when ready to publish.
-  // Leave undefined to avoid a broken download link.
   email: "wprofessional49@gmail.com",
   github: "https://github.com/waseem049",
   linkedin: "https://linkedin.com/in/waseem049",

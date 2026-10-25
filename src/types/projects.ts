@@ -1,4 +1,4 @@
-export type ProjectStatus = 'In development' | 'Complete & live' | 'Ongoing brand work'
+export type ProjectStatus = 'In development' | 'Complete & live' | 'Live' | 'Ongoing brand work'
 
 export type ProjectVisual = 'uhi' | 'academy' | 'fitness' | 'studio'
 

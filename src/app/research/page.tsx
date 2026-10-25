@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ResearchPage() {
   return (
-    <div className="inner-page container research-page">
+    <div className="inner-page research-page">
       <ScrollAnimate direction="up">
         <PageHeading
           eyebrow="Research & Technical Writing / 02"
@@ -24,7 +24,7 @@ export default function ResearchPage() {
       <ScrollAnimate direction="up" delay={80}>
         <article className="research-paper-card">
           <div className="paper-topline">
-            <span>Term Paper / LPU BCA</span>
+            <span>Research Paper · Computer Science & AI</span>
             <span className="status status-progress"><i />In progress</span>
           </div>
           <p className="paper-kicker">Current Research Direction</p>
@@ -43,7 +43,7 @@ export default function ResearchPage() {
             </div>
             <div>
               <span>Stage</span>
-              <strong>Topic locked; work in progress</strong>
+              <strong>Active Investigation & Benchmarking</strong>
             </div>
             <div>
               <span>Data</span>

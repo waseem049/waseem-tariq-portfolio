@@ -12,13 +12,7 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section className="hero-section relative overflow-hidden border-b border-[var(--line)] bg-[var(--bg)]">
-        {/* Ambient gradient orb */}
-        <div className="absolute top-[-200px] right-[-150px] w-[600px] h-[600px] bg-[radial-gradient(circle,_rgba(79,70,229,0.08)_0%_,_transparent_65%)] pointer-events-none animate-[orb-float_8s_ease-in-out_infinite]" />
-
-        {/* Subtle grid background */}
-        <div className="absolute inset-0 bg-[linear-gradient(var(--line)_1px_,transparent_1px)_,linear-gradient(90deg_,var(--line)_1px_,transparent_1px)] bg-[48px_48px] opacity-45 mask-[radial-gradient(ellipse_80%_60%_at_80%_40%_,_black_0%_,_transparent_70%)] pointer-events-none" />
-
-        <div className="container hero-grid grid-cols-[1fr_1fr] items-center gap-[clamp(40px,7vw,100px)] min-h-[600px] px-0 py-[80px]_88px">
+        <div className="container hero-grid items-center gap-[clamp(40px,7vw,100px)] min-h-[580px] py-[80px]">
 
           {/* Left: copy */}
           <div className="hero-copy">
@@ -30,84 +24,94 @@ export default function HomePage() {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={100}>
-              <h1 className="mt-[24px] mb-[20px] text-[clamp(48px,7vw,80px)] font-[800] tracking-[-0.04em] leading-[1.05] text-[var(--ink)]">
-                Building reliable software,{" "}
-                <br />
-                from frontend to production.
+              <h1 className="mt-[24px] mb-[20px] text-[clamp(40px,6.5vw,76px)] font-[800] tracking-[-0.04em] leading-[1.05] text-[var(--ink)]">
+                Building production<br />
+                software,{" "}
+                <em className="italic text-[var(--accent)] not-italic" style={{ fontStyle: 'italic' }}>end to end.</em>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={200}>
-              <p className="hero-desc max-w-[560px] mb-0 text-[18px] text-[var(--ink-2)] leading-[1.7]">
-                Full Stack Java Engineer · Software Developer
+              <p className="hero-desc max-w-[520px] mb-0 text-[17px] text-[var(--ink-2)] leading-[1.7]">
+                Java · Spring Boot · Microservices · Next.js · Docker · VPS
               </p>
             </ScrollReveal>
 
-            <ScrollReveal direction="up" delay={300}>
-              <p className="mt-[12px] max-w-[560px] text-[15px] text-[var(--ink-3)] leading-[1.75]">
-                I build practical web products and backend systems with Java, Spring Boot, modern web technologies, and cloud deployment. I'm also exploring reliable AI-assisted healthcare discovery.
+            <ScrollReveal direction="up" delay={280}>
+              <p className="mt-[12px] max-w-[520px] text-[15px] text-[var(--ink-3)] leading-[1.8]">
+                I design and ship full-stack systems — from Spring Boot microservices and PostgreSQL backends to polished Next.js frontends, deployed to production on Linux VPS with Docker and Nginx.
               </p>
             </ScrollReveal>
 
-            <ScrollReveal direction="up" delay={400}>
+            <ScrollReveal direction="up" delay={360}>
               <div className="hero-actions flex flex-wrap gap-10 mt-[28px]">
                 <Link
-                  className="btn btn-primary inline-flex items-center gap-8 h-[42px] px-[20px] rounded-[20px] bg-[var(--ink)] text-[var(--bg)] font-[600] text-[13px] shadow-sm hover:-translate-y-[2px] transition-all duration-150 ease-spring"
+                  className="btn btn-primary inline-flex items-center gap-8"
                   href="/projects"
                 >
                   View My Projects <span aria-hidden="true">→</span>
                 </Link>
-                {profile.resumePath ? (
-                  <a
-                    className="btn btn-ghost inline-flex items-center gap-8 h-[42px] px-[20px] rounded-[20px] border border-[var(--line-2)] text-[var(--ink-2)] bg-transparent font-[600] text-[13px] hover:bg-[var(--surface-2)] hover:text-[var(--ink)] transition-all duration-150 ease-in-out"
-                    href={profile.resumePath}
-                    download
-                  >
-                    Download Resume <span aria-hidden="true">↓</span>
-                  </a>
-                ) : null}
+                <Link
+                  className="btn btn-secondary inline-flex items-center gap-8"
+                  href="/contact"
+                >
+                  Get in Touch <span aria-hidden="true">↗</span>
+                </Link>
               </div>
             </ScrollReveal>
 
-            <ScrollReveal direction="up" delay={500}>
+            <ScrollReveal direction="up" delay={440}>
               <div className="hero-meta flex items-center gap-8 mt-[36px] text-[11px] text-[var(--ink-4)]">
                 <span className="hero-meta-line w-[24px] h-[1px] bg-[var(--line-2)]" />
-                Building at the intersection of software and AI.
+                Production-grade microservices & web engineering · Available for roles & collaborations
               </div>
             </ScrollReveal>
           </div>
 
-          {/* Right: visual */}
+          {/* Right: visual stats panel */}
           <div className="hero-visual-wrap relative">
             <div className="hero-visual-label flex justify-between items-center mb-[10px] text-[9px] font-[600] tracking-[0.1em] uppercase text-[var(--ink-4)]">
-              <span>Code</span>
+              <span>Stack Overview</span>
               <span>Fig. 01</span>
             </div>
 
-            <div
-              className="hero-visual relative overflow-hidden border border-[var(--line)] rounded-[14px] bg-[var(--surface)] aspect-[4/3] max-h-[400px] shadow-md"
-            >
-              <div className="absolute inset-0 bg-[linear-gradient(var(--line)_1px_,transparent_1px)_,linear-gradient(90deg_,var(--line)_1px_,transparent_1px)] bg-[32px_32px] opacity-30" />
-              <div className="relative z-10 h-full flex items-center justify-center p-[28px]">
-                <div
-                  className="relative rounded-[28px] overflow-hidden aspect-square bg-[var(--surface-2)] border border-[var(--line)] shadow-md grid place-items-center text-center"
-                >
-                  <div className="flex flex-col items-center gap-4">
-                    <span className="text-[48px]">💻</span>
-                    <span className="text-[11px] font-[600] uppercase tracking-[0.1em] text-[var(--ink-4)]">
-                      Portfolio placeholder
-                    </span>
-                    <span className="text-[10px] text-[var(--ink-3)]">
-                      Add /public/profile.jpg for a portrait
-                    </span>
+            <div className="hero-visual relative overflow-hidden border border-[var(--line)] rounded-[14px] bg-[var(--surface)] shadow-md">
+              <div className="absolute inset-0 bg-[linear-gradient(var(--line)_1px_,transparent_1px),linear-gradient(90deg,var(--line)_1px_,transparent_1px)] bg-[32px_32px] opacity-[0.25]" />
+              <div className="relative z-10 p-[28px] flex flex-col gap-[16px]">
+
+                {/* Stack rows */}
+                {[
+                  { label: 'Backend', value: 'Java · Spring Boot · Microservices', icon: '◈', color: 'var(--accent)' },
+                  { label: 'Frontend', value: 'Next.js · React · TypeScript', icon: '◉', color: '#6366f1' },
+                  { label: 'Database', value: 'PostgreSQL · Neon · MongoDB', icon: '▣', color: '#10b981' },
+                  { label: 'DevOps', value: 'Docker · Nginx · Linux VPS', icon: '◆', color: '#f59e0b' },
+                ].map((row) => (
+                  <div key={row.label} className="flex items-center gap-[12px] p-[12px] rounded-[10px] bg-[var(--surface-2)] border border-[var(--line)] group hover:border-[var(--accent)] transition-colors duration-150">
+                    <span style={{ color: row.color, fontSize: '18px', flexShrink: 0 }}>{row.icon}</span>
+                    <div>
+                      <div className="text-[10px] font-[700] uppercase tracking-[0.08em] text-[var(--ink-4)] mb-[2px]">{row.label}</div>
+                      <div className="text-[12px] text-[var(--ink-2)] font-[500]">{row.value}</div>
+                    </div>
                   </div>
+                ))}
+
+                {/* Live badge */}
+                <div className="flex items-center justify-between p-[12px] rounded-[10px] bg-[var(--green-bg)] border border-transparent mt-[4px]">
+                  <div>
+                    <div className="text-[10px] font-[700] uppercase tracking-[0.08em] text-[var(--green)] mb-[2px]">Live in Production</div>
+                    <div className="text-[12px] text-[var(--green)] font-[500]">exceptionaliasacademy.com</div>
+                  </div>
+                  <span className="live-pill">
+                    <span className="live-dot" /> Live
+                  </span>
                 </div>
               </div>
             </div>
 
             <div className="hero-visual-caption flex justify-between mt-[10px] text-[9px] font-[600] tracking-[0.08em] uppercase text-[var(--ink-4)]">
+              <span>Design</span>
               <span>Build</span>
-              <span>Improve</span>
+              <span>Deploy</span>
             </div>
           </div>
 
@@ -115,7 +119,7 @@ export default function HomePage() {
 
         <div className="hero-rule border-t border-[var(--line)] bg-[var(--surface-2)]">
           <div className="container hero-rule-inner flex justify-between items-center px-[12px] text-[9px] font-[600] tracking-[0.1em] uppercase text-[var(--ink-4)]">
-            <span>Selected work &amp; research</span>
+            <span>Selected work & research</span>
             <span>Scroll to explore ↓</span>
           </div>
         </div>
@@ -127,63 +131,8 @@ export default function HomePage() {
           <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Java / Spring Boot</span>
           <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Next.js / React</span>
           <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>PostgreSQL / Docker</span>
-          <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Cloud Deployment</span>
+          <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Linux VPS / Nginx</span>
           <span className="inline-flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"/>Applied AI Research</span>
-        </div>
-      </section>
-
-      {/* ── SKILL BANDS ── */}
-      <section className="skill-bands section border-b border-[var(--line)] py-[96px] bg-[var(--bg)]">
-        <div className="container">
-          <div className="skill-grid grid-cols-[repeat(4,minmax(0,1fr))] gap-[24px]">
-            <div className="skill-card p-[20px] rounded-[14px] border border-[var(--line)] bg-[var(--surface)] shadow-sm hover:shadow-md hover:border-[var(--line-2)] transition-all duration-250 ease-in-out group">
-              <div className="skill-icon inline-flex items-center justify-center w-[10px] h-[10px] rounded-full bg-[var(--accent)] text-white mb-[4px] group-hover:shadow-[0_0_8px_var(--accent-glow)] transition-shadow duration-250">
-                <span className="text-[8px]">•</span>
-              </div>
-              <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
-                Full Stack Development
-              </div>
-              <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
-                Java • Spring Boot • React • Next.js
-              </div>
-            </div>
-
-            <div className="skill-card p-[20px] rounded-[14px] border border-[var(--line)] bg-[var(--surface)] shadow-sm hover:shadow-md hover:border-[var(--line-2)] transition-all duration-250 ease-in-out group">
-              <div className="skill-icon inline-flex items-center justify-center w-[10px] h-[10px] rounded-full bg-[var(--accent)] text-white mb-[4px] group-hover:shadow-[0_0_8px_var(--accent-glow)] transition-shadow duration-250">
-                <span className="text-[8px]">•</span>
-              </div>
-              <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
-                Cloud &amp; DevOps
-              </div>
-              <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
-                Docker • Nginx • VPS Deployment
-              </div>
-            </div>
-
-            <div className="skill-card p-[20px] rounded-[14px] border border-[var(--line)] bg-[var(--surface)] shadow-sm hover:shadow-md hover:border-[var(--line-2)] transition-all duration-250 ease-in-out group">
-              <div className="skill-icon inline-flex items-center justify-center w-[10px] h-[10px] rounded-full bg-[var(--accent)] text-white mb-[4px] group-hover:shadow-[0_0_8px_var(--accent-glow)] transition-shadow duration-250">
-                <span className="text-[8px]">•</span>
-              </div>
-              <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
-                Database
-              </div>
-              <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
-                PostgreSQL • MySQL
-              </div>
-            </div>
-
-            <div className="skill-card p-[20px] rounded-[14px] border border-[var(--line)] bg-[var(--surface)] shadow-sm hover:shadow-md hover:border-[var(--line-2)] transition-all duration-250 ease-in-out group">
-              <div className="skill-icon inline-flex items-center justify-center w-[10px] h-[10px] rounded-full bg-[var(--accent)] text-white mb-[4px] group-hover:shadow-[0_0_8px_var(--accent-glow)] transition-shadow duration-250">
-                <span className="text-[8px]">•</span>
-              </div>
-              <div className="skill-label text-[11px] font-[700] tracking-[0.12em] uppercase text-[var(--ink-4)] mb-[2px]">
-                Applied AI Research
-              </div>
-              <div className="skill-value text-[11px] text-[var(--ink-3)] leading-[1.6]">
-                ML • NLP • Real-world Impact
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -198,14 +147,13 @@ export default function HomePage() {
                   01 — Selected Work
                 </span>
                 <h2>
-                  Projects built around<br />
-                  <em>real problems.</em>
+                  Projects shipped,<br />
+                  <em>problems solved.</em>
                 </h2>
               </div>
               <div className="section-head-aside">
                 <p>
-                  A selection of product and engineering work. Each case study
-                  distinguishes what exists today from what is still being developed.
+                  Production deployments, full-stack platforms, applied AI prototypes, and web tools — each built from architecture through to deployment.
                 </p>
                 <Link className="text-link" href="/projects">
                   All projects <span aria-hidden="true">↗</span>
@@ -215,7 +163,7 @@ export default function HomePage() {
           </ScrollReveal>
 
           <div className="projects-grid">
-            {projects.map((project, idx) => (
+            {projects.slice(0, 3).map((project, idx) => (
               <ScrollReveal key={project.slug} delay={idx * 70} direction="up">
                 <ProjectCard project={project} />
               </ScrollReveal>
@@ -239,15 +187,15 @@ export default function HomePage() {
                 <em>reliably?</em>
               </h2>
               <p>
-                My current term-paper direction explores semantic retrieval alongside
-                deterministic constraint validation, with a keyword-search baseline and
-                evaluation on synthetic service data and manually labelled queries.
+                Exploring semantic retrieval alongside deterministic constraint
+                validation — comparing against keyword-search baselines, evaluated
+                on synthetic service data and manually labelled queries.
               </p>
               <div className="research-status">
                 <span className="status status-progress">
                   <i />Term paper in progress
                 </span>
-                <span className="research-status-note">No results claimed before evaluation.</span>
+                <span className="research-status-note">Applied AI · Healthcare Discovery</span>
               </div>
               <Link className="btn-panel" href="/research">
                 Read the research outline <span aria-hidden="true">↗</span>
@@ -297,8 +245,8 @@ export default function HomePage() {
                 <span className="diagram-symbol">↗</span>
               </div>
               <div className="diagram-foot">
-                <span>Conceptual Design</span>
-                <span>Not a Clinical System</span>
+                <span>Applied AI Design</span>
+                <span>Academic Research Study</span>
               </div>
             </div>
           </ScrollReveal>
@@ -315,8 +263,8 @@ export default function HomePage() {
                 03 — How I Work
               </span>
               <h2>
-                Curious by nature.<br />
-                <em>Practical by design.</em>
+                Architecture-first.<br />
+                <em>Delivery-focused.</em>
               </h2>
             </div>
           </ScrollReveal>
@@ -326,8 +274,8 @@ export default function HomePage() {
               <div className="approach-item">
                 <span className="approach-num">01</span>
                 <div>
-                  <h3>Build the thing</h3>
-                  <p>Turn requirements into usable interfaces, application flows, and working software.</p>
+                  <h3>Design the architecture</h3>
+                  <p>Think through APIs, data models, service boundaries, and deployment before writing a line of production code.</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -335,8 +283,8 @@ export default function HomePage() {
               <div className="approach-item">
                 <span className="approach-num">02</span>
                 <div>
-                  <h3>Understand the system</h3>
-                  <p>Think through APIs, data models, service boundaries, and deployment—not just the UI.</p>
+                  <h3>Build and integrate</h3>
+                  <p>Implement across the full stack — backend services, frontend interfaces, database schema, and infrastructure together.</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -344,8 +292,8 @@ export default function HomePage() {
               <div className="approach-item">
                 <span className="approach-num">03</span>
                 <div>
-                  <h3>Test the assumption</h3>
-                  <p>Use clear baselines and defined metrics when exploring AI-assisted approaches.</p>
+                  <h3>Ship to production</h3>
+                  <p>Deploy to real infrastructure with proper configuration, monitoring, and domain/HTTPS setup — not just local demos.</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -365,8 +313,8 @@ export default function HomePage() {
                 </span>
                 <h2>Good work starts<br />with a good conversation.</h2>
                 <p>
-                  Open to software engineering opportunities, research conversations,
-                  and thoughtful collaborations.
+                  Open to software engineering opportunities, technical collaborations,
+                  and research conversations.
                 </p>
               </div>
               <Link className="btn btn-primary" href="/contact">

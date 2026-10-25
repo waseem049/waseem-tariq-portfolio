@@ -13,7 +13,7 @@ export default function ContactPage() {
   const hasLinks = Boolean(profile.email || profile.github || profile.linkedin);
 
   return (
-    <div className="inner-page container contact-page">
+    <div className="inner-page contact-page">
       <ScrollAnimate direction="up">
         <PageHeading
           eyebrow="Contact / 04"

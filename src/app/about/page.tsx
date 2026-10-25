@@ -7,17 +7,17 @@ import { profile } from "@/data/profile";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Waseem Tariq, a software developer interested in full-stack engineering and applied AI research.",
+    "About Waseem Tariq — Full Stack Java Engineer building production software with Spring Boot, microservices, Next.js, and cloud deployment.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="inner-page container">
+    <div className="inner-page">
       <ScrollAnimate direction="up">
         <PageHeading
-          eyebrow="About / 03"
-          title="An engineer in progress."
-          description="I'm building my career around software engineering, learning how reliable systems fit together, and exploring research questions where technology can solve practical problems."
+          eyebrow="About"
+          title="Engineer. Builder. Researcher."
+          description="I build production software across the full stack — Java/Spring Boot backends, Next.js frontends, and cloud deployments. I'm also pursuing applied AI research in healthcare service discovery."
         />
       </ScrollAnimate>
 
@@ -26,34 +26,34 @@ export default function AboutPage() {
           <div>
             <span className="eyebrow">
               <span className="eyebrow-dot" />
-              A Little Context
+              What I Do
             </span>
             <h2>
-              Build with care.<br />
-              <em>Keep learning.</em>
+              Build with craft.<br />
+              <em>Ship to production.</em>
             </h2>
             <p>
-              I work across frontend development and application engineering, with
-              projects spanning healthcare discovery, education, fitness, and a small
-              digital venture. I enjoy understanding how the pieces fit together—from
-              a user&apos;s first interaction to APIs, data, and deployment.
+              I work across the full software stack — designing microservices
+              architectures, building APIs and backend systems, and connecting
+              them to polished React/Next.js frontends. My recent work includes
+              shipping a live platform for an educational institute with Spring
+              Boot microservices, Docker, Nginx, and a production VPS deployment.
             </p>
             <p>
-              My professional background includes software development and government
-              service, giving me experience with both hands-on technical work and
-              structured, process-oriented environments. Alongside engineering, I&apos;m
-              completing an online Bachelor of Computer Applications and developing a
-              research direction around semantic retrieval and deterministic constraint
-              validation for healthcare service discovery.
+              Alongside engineering, I&apos;m completing a Bachelor of Computer
+              Applications at Lovely Professional University and researching
+              reliable AI-assisted healthcare service discovery — exploring how
+              semantic retrieval and constraint validation can improve how people
+              find the right medical services.
             </p>
             <p>
-              I&apos;m interested in opportunities that let me deepen my software
-              engineering skills while preparing for further study in computer science
-              and applied AI.
+              I&apos;m interested in opportunities where I can deepen my engineering
+              skills, contribute to real products, and work with teams that care
+              about quality and thoughtful systems.
             </p>
             <div className="hero-actions">
               <Link className="btn btn-primary" href="/projects">
-                See selected work <span aria-hidden="true">↗</span>
+                See my work <span aria-hidden="true">↗</span>
               </Link>
               {profile.resumePath ? (
                 <a className="btn btn-secondary" href={profile.resumePath} download>
@@ -67,7 +67,7 @@ export default function AboutPage() {
         <aside className="about-sidebar">
           <ScrollAnimate direction="right" delay={140}>
             <div className="sidebar-card">
-              <span className="sidebar-label">Education</span>
+              <span className="sidebar-label">Currently Studying</span>
               <h3>{profile.education[0].degree}</h3>
               <p>{profile.education[0].institution}</p>
               <span className="status status-progress">
@@ -81,30 +81,30 @@ export default function AboutPage() {
 
           <ScrollAnimate direction="right" delay={220}>
             <div className="sidebar-card">
-              <span className="sidebar-label">Areas I&apos;m Exploring</span>
+              <span className="sidebar-label">Core Focus Areas</span>
               <ul className="interest-list">
-                <li>Frontend &amp; full-stack engineering</li>
-                <li>Backend systems and APIs</li>
-                <li>Semantic retrieval and applied AI</li>
-                <li>Reliable healthcare technology</li>
+                <li>Java, Spring Boot & Microservices</li>
+                <li>Next.js & React frontend engineering</li>
+                <li>APIs, databases & cloud deployment</li>
+                <li>Applied AI & semantic retrieval</li>
+                <li>Healthcare technology research</li>
               </ul>
+            </div>
+          </ScrollAnimate>
+
+          <ScrollAnimate direction="right" delay={300}>
+            <div className="sidebar-card">
+              <span className="sidebar-label">Location</span>
+              <strong>India</strong>
+              <div className="sidebar-divider" />
+              <span className="sidebar-label">Open to</span>
+              <p style={{ margin: '4px 0 0', fontSize: '13px' }}>
+                Remote engineering roles, research collaborations, and technical conversations.
+              </p>
             </div>
           </ScrollAnimate>
         </aside>
       </div>
-
-      <ScrollAnimate direction="up" delay={260}>
-        <div className="honesty-note">
-          <span className="note-mark">i</span>
-          <p>
-            This page intentionally avoids listing employer names, exact employment
-            dates, grades, certifications, or quantified achievements that have not yet
-            been verified for public use. Those can be added once the details and wording
-            are confirmed.
-          </p>
-        </div>
-      </ScrollAnimate>
     </div>
   );
 }
-

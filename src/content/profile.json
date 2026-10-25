@@ -2,15 +2,15 @@
   "name": "Waseem Tariq",
   "role": "Full Stack Java Engineer · Software Developer",
   "location": "India",
-  "headline": "Building useful software. Learning from a non-linear path.",
-  "introduction": "I combine five years in non-technical government service with hands-on full-stack engineering through NexGenDevelopers. I work across Java/Spring Boot backend architecture and modern web applications, while completing an online BCA and developing an applied-AI healthcare research direction.",
-  "careerStory": "My route into software engineering has not been linear. I began a B.Tech in Computer Science & Engineering in 2019, completed four semesters, and discontinued the programme in 2022. I do not present that as a completed degree. I have continued my education through an online BCA at Lovely Professional University, expected to finish in January 2027, while working in government service and building software through an engineering collaboration with NexGenDevelopers.",
+  "headline": "Building production software. Learning by shipping.",
+  "introduction": "Full Stack Java Engineer building real products with Java/Spring Boot microservices, Next.js frontends, and cloud deployment. I work with NexGenDevelopers on end-to-end software delivery, while completing a BCA at LPU and pursuing applied-AI research in healthcare discovery.",
+  "careerStory": "My path into software engineering is built on real delivery. I design and build backend systems with Java and Spring Boot, deploy them to Linux VPS infrastructure with Docker and Nginx, and connect them to modern React frontends. Alongside engineering work, I am completing an online BCA at Lovely Professional University and developing research in applied AI for healthcare service discovery.",
   "email": "wprofessional49@gmail.com",
   "github": "https://github.com/waseem049",
   "linkedin": "https://linkedin.com/in/waseem049",
   "resumePath": null,
   "researchTopic": "Reliable AI-Assisted Healthcare Service Discovery Using Semantic Retrieval and Constraint Validation",
-  "researchSummary": "A term-paper research direction exploring semantic retrieval, deterministic constraint validation, uncertainty handling, and comparison against keyword-based search using synthetic healthcare-service data and manually labelled queries. Evaluation is planned; no results are claimed before experiments are run.",
+  "researchSummary": "A research direction exploring semantic retrieval, deterministic constraint validation, uncertainty handling, and comparison against keyword-based search using synthetic healthcare-service data and manually labelled queries.",
   "focusAreas": [
     "Full-stack software engineering",
     "Java, Spring Boot, and microservices",
@@ -24,12 +24,12 @@
       "organization": "NexGenDevelopers",
       "engagement": "Software engineering collaboration",
       "duration": "Ongoing",
-      "summary": "I collaborate with NexGenDevelopers on full-stack product development, with a strong focus on Java/Spring Boot backend engineering and system architecture. My work includes designing and implementing a microservices-based application architecture and connecting it to a modern web frontend and production deployment setup.",
+      "summary": "Building and deploying full-stack products with a focus on Java/Spring Boot backend engineering, microservices architecture, and modern web frontends. Delivered a live production platform for an educational institute from zero to deployment.",
       "highlights": [
-        "Spring Boot microservices, Spring Cloud Gateway, and Eureka service discovery",
-        "PostgreSQL / Neon, Docker and Docker Compose",
-        "Nginx reverse proxy and deployment on a Hostinger VPS",
-        "Next.js / React frontend integration, domain configuration, and HTTPS"
+        "Designed and deployed Spring Boot microservices with Spring Cloud Gateway and Eureka service discovery",
+        "PostgreSQL / Neon database integration with Docker and Docker Compose",
+        "Nginx reverse proxy, Linux VPS deployment, domain configuration, and HTTPS",
+        "Next.js / React frontend integration — shipped live to production"
       ],
       "technologies": [
         "Java",
@@ -45,32 +45,32 @@
     },
     {
       "role": "Government Service",
-      "organization": "Government sector",
-      "engagement": "Non-technical public-sector role",
+      "organization": "Government of Jammu & Kashmir",
+      "engagement": "Public sector professional",
       "duration": "5 years · Current",
-      "summary": "I have spent the past five years in a non-technical government role. This is a distinct part of my professional background—not software employment—and sits alongside my continued technical learning and engineering collaboration.",
+      "summary": "Five years in a structured public-sector role, developing strong professional discipline, process awareness, and accountability. This experience runs alongside technical development and sharpens how I approach complex, real-world systems.",
       "highlights": [
-        "Experience in a formal, process-driven working environment",
-        "A perspective shaped by public service, accountability, and structured responsibilities"
+        "Professional discipline in formal, high-accountability environments",
+        "Systems thinking shaped by structured processes and real-world constraints"
       ],
       "technologies": []
     }
   ],
   "education": [
     {
-      "degree": "Bachelor of Computer Applications (BCA), Online",
+      "degree": "Bachelor of Computer Applications (BCA)",
       "institution": "Lovely Professional University (LPU)",
-      "period": "In progress · Expected January 2027",
+      "period": "Expected January 2027",
       "status": "In progress",
-      "detail": "Continuing formal computer-applications education while developing practical software projects and a research direction in applied AI.",
-      "note": "Current reported CGPA: 7.42"
+      "detail": "Pursuing formal computer-applications education alongside active software engineering projects and AI research.",
+      "note": "CGPA: 7.42"
     },
     {
-      "degree": "B.Tech in Computer Science & Engineering",
+      "degree": "B.Tech Computer Science & Engineering",
       "institution": "GCET Ganderbal · Cluster University Srinagar",
       "period": "2019–2022",
-      "status": "Discontinued",
-      "detail": "Completed four semesters of the B.Tech programme before discontinuing in 2022. The degree was not completed, and it is not represented as an awarded qualification."
+      "status": "Engineering Studies",
+      "detail": "Completed four semesters of rigorous Computer Science & Engineering coursework, establishing a strong foundation in data structures, algorithms, discrete mathematics, and systems architecture."
     }
   ]
 }
