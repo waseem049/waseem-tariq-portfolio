@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <SiteHeader />

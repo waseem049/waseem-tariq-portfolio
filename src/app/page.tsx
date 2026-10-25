@@ -71,13 +71,8 @@ export default function HomePage() {
 
           {/* Right: visual */}
           <div className="hero-visual-wrap relative">
-            <div className="hero-visual-label flex justify-between items-center mb-[10px] text-[9px] font-[600] tracking-[0.1em] uppercase text-[var(--ink-4)]">
-              <span>Code</span>
-              <span>Fig. 01</span>
-            </div>
-
             <div
-              className="hero-visual relative overflow-hidden border border-[var(--line)] rounded-[14px] bg-[var(--surface)] aspect-[4/3] max-h-[400px] shadow-md"
+              className="hero-visual relative overflow-hidden border border-[var(--line)] rounded-[14px] bg-[var(--surface)] aspect-[4/3] max-h-[400px] shadow-md flex-shrink-0"
             >
               <div className="absolute inset-0 bg-[linear-gradient(var(--line)_1px_,transparent_1px)_,linear-gradient(90deg_,var(--line)_1px_,transparent_1px)] bg-[32px_32px] opacity-30" />
               <div className="relative z-10 h-full flex items-center justify-center p-[28px]">
@@ -101,9 +96,13 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="hero-visual-caption flex justify-between mt-[10px] text-[9px] font-[600] tracking-[0.08em] uppercase text-[var(--ink-4)]">
-              <span>Build</span>
-              <span>Improve</span>
+            {/* Vertical Code / Build / Improve stack on far right edge */}
+            <div className="absolute right-0 top-[20%] bottom-[20%] flex flex-col items-center gap-[10px] pointer-events-none">
+              <span className="text-[10px] font-[600] tracking-[0.15em] uppercase text-[var(--ink-4)]">Code</span>
+              <div className="w-[1px] h-[14px] bg-[var(--amber)]" />
+              <span className="text-[10px] font-[600] tracking-[0.15em] uppercase text-[var(--ink-4)]">Build</span>
+              <div className="w-[1px] h-[14px] bg-[var(--amber)]" />
+              <span className="text-[10px] font-[600] tracking-[0.15em] uppercase text-[var(--ink-4)]">Improve</span>
             </div>
           </div>
 

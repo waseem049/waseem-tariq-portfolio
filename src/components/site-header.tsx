@@ -7,6 +7,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 const navItems = [
   { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
   { href: "/research", label: "Research" },
@@ -71,7 +72,7 @@ export function SiteHeader() {
               <Link
                 href={item.href}
                 key={item.href}
-                className={`nav-link relative inline-flex items-center px-3 py-[6px] rounded-[8px] text-[13px] font-[500] text-[var(--ink-3)] transition-all duration-150 ease-in-out ${active ? "text-[var(--accent)] bg-[var(--accent-subtle)] font-[600]" : ""}`}
+                className={`nav-link relative inline-flex items-center px-3 py-[6px] rounded-[8px] text-[13px] font-[500] text-[var(--ink-3)] transition-all duration-150 ease-in-out ${active ? "text-[var(--ink)] font-[600]" : ""}`}
                 aria-current={active ? "page" : undefined}
                 onClick={() => setMenuOpen(false)}
               >

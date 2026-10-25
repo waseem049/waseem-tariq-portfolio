@@ -11,7 +11,6 @@ export function ThemeToggle() {
     const saved = window.localStorage.getItem("waseem-theme");
     const nextTheme: Theme = saved === "dark" ? "dark" : "light";
     setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
     if (nextTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
@@ -22,7 +21,6 @@ export function ThemeToggle() {
   function toggleTheme() {
     const nextTheme: Theme = theme === "light" ? "dark" : "light";
     setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
     if (nextTheme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
@@ -42,7 +40,6 @@ export function ThemeToggle() {
       <span aria-hidden="true" className="theme-toggle-icon">
         {theme === "light" ? "☾" : "☼"}
       </span>
-      <span className="theme-toggle-label">{theme === "light" ? "Dark" : "Light"}</span>
     </button>
   );
 }
