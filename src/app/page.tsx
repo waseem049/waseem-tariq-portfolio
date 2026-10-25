@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArchitectureDiagram } from "@/components/architecture-diagram";
+import { useEffect, useRef } from "react";
 import { TechPill } from "@/components/tech-pill";
 import { ProjectCaseCard } from "@/components/project-case-card";
 import { ScrollAnimate } from "@/components/scroll-animate";
@@ -9,6 +9,19 @@ import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 
 export default function HomePage() {
+  const parallaxRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = parallaxRef.current;
+    if (!el) return;
+    const onScroll = () => {
+      const y = window.scrollY * 0.15;
+      el.style.transform = `translateY(${y}px)`;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       {/* ── HERO ── */}
@@ -67,9 +80,48 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right: architecture diagram */}
+          {/* Right: hero image with parallax */}
           <div className="hero-visual-wrap relative flex-shrink-0">
-            <ArchitectureDiagram />
+            <div ref={parallaxRef} className="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden border border-[var(--line)] bg-[var(--surface)] parallax-img">
+              {/* Placeholder for hero image - replace with <img src="/hero.png" ... /> when asset provided */}
+              <div className="absolute inset-0 grid place-items-center text-[var(--ink-3)] text-sm">
+                Hero image placeholder
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ABOUT ── */}
+      <section className="section py-[80px] bg-[var(--bg)]">
+        <div className="container grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-[48px] items-start">
+          <div>
+            <span className="eyebrow">
+              <span className="eyebrow-dot" />
+              About
+            </span>
+            <h2 className="mt-[12px] text-[32px] font-[700] tracking-[-0.03em] text-[var(--ink)]">
+              Full Stack Java Engineer
+            </h2>
+            <p className="mt-[16px] text-[15px] text-[var(--ink-2)] leading-[1.75] max-w-[640px]">
+              I build practical web products and backend systems with Java, Spring Boot, modern web technologies, and cloud deployment. I&apos;m also exploring reliable AI-assisted healthcare discovery.
+            </p>
+          </div>
+          <div>
+            <div className="p-[20px] rounded-[12px] border border-[var(--line)] bg-[var(--surface)]">
+              <div className="text-[11px] font-[600] uppercase tracking-[0.1em] text-[var(--ink-4)] mb-[12px]">Skills</div>
+              <div className="flex flex-wrap gap-[8px]">
+                {["Java","Spring Boot","Next.js","TypeScript","PostgreSQL","Docker","Nginx","React"].map(skill => (
+                  <span key={skill} className="text-[12px] font-[500] text-[var(--ink-3)] border border-[var(--line-2)] rounded-[6px] px-[10px] py-[6px] bg-[var(--surface-2)]">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            {/* Placeholder for about photo */}
+            <div className="mt-[16px] aspect-[4/5] rounded-[12px] border border-[var(--line)] bg-[var(--surface)] grid place-items-center text-[var(--ink-3)] text-sm">
+              About photo placeholder
+            </div>
           </div>
         </div>
       </section>
