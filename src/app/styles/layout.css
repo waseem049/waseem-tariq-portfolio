@@ -1,4 +1,4 @@
-/* Layout Utilities */
+﻿/* Layout Utilities */
 .container {
   width: min(1140px, calc(100% - 48px));
   margin-inline: auto;
@@ -6,6 +6,10 @@
 
 .section {
   padding-block: 96px;
+}
+
+.section-tight {
+  padding-block: 24px;
 }
 
 .section-sm {

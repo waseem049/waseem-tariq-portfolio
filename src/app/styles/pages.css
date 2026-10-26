@@ -1,6 +1,6 @@
-/* Page-Specific Styles */
+﻿/* Page-Specific Styles */
 
-/* ── HERO ── */
+/* — HERO — */
 .hero-section {
   position: relative;
   overflow: hidden;
@@ -8,7 +8,7 @@
 }
 
 .hero-section::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -200px;
   right: -150px;
@@ -20,7 +20,7 @@
 }
 
 .hero-section::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image:
@@ -170,13 +170,13 @@
   color: var(--color-ink-4);
 }
 
-/* ── SECTION HEADING ── */
+/* — SECTION HEADING — */
 .section-head {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   gap: 32px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .section-head-aside {
@@ -205,14 +205,14 @@
   line-height: 1.75;
 }
 
-/* ── PROJECT GRID ── */
+/* — PROJECT GRID — */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
-/* ── RESEARCH SECTION ── */
+/* — RESEARCH SECTION — */
 .research-section {
   padding-block: 96px;
   background: var(--color-panel);
@@ -222,7 +222,7 @@
 }
 
 .research-section::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-image: linear-gradient(var(--color-panel-3) 1px, transparent 1px),
@@ -420,7 +420,7 @@
   border-top: 1px solid var(--color-panel-3);
 }
 
-/* ── APPROACH SECTION ── */
+/* — APPROACH SECTION — */
 .approach-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -439,7 +439,7 @@
 .approach-grid h2 em {
   font-style: normal;
   color: var(--color-ink-3);
-  font-weight: 400;
+  font-weight: 400.
 }
 
 .approach-list {
@@ -485,7 +485,7 @@
   line-height: 1.75;
 }
 
-/* ── CONTACT BAND ── */
+/* — CONTACT BAND — */
 .contact-band {
   padding-block: 64px;
 }
@@ -528,7 +528,7 @@
   line-height: 1.7;
 }
 
-/* ── SKILL BANDS ── */
+/* — SKILL BANDS — */
 .skill-bands {
   padding-block: 96px;
 }
@@ -585,7 +585,7 @@
   box-shadow: 0 0 8px var(--color-accent-glow);
 }
 
-/* ── HERO PHOTO PORTRAIT ── */
+/* — HERO PHOTO PORTRAIT — */
 .hero-portrait {
   position: relative;
   width: 100%;

@@ -10,15 +10,16 @@ interface ProjectFiltersProps {
   searchQuery: string
   onChangeSearch: (query: string) => void
   onFocusChange: (focused: boolean) => void
+  counts: Record<string, number>
 }
 
-export function ProjectFilters({ activeTab, onChange, searchQuery, onChangeSearch, onFocusChange }: ProjectFiltersProps) {
+export function ProjectFilters({ activeTab, onChange, searchQuery, onChangeSearch, onFocusChange, counts }: ProjectFiltersProps) {
   const FILTER_TABS = [
-    { id: 'all', label: 'All Projects' },
-    { id: 'live', label: 'Live Deployments' },
-    { id: 'fullstack', label: 'Full-Stack & Systems' },
-    { id: 'ai', label: 'Applied AI & Research' },
-    { id: 'tools', label: 'Web Apps & Tools' },
+    { id: 'all', label: 'All Projects', count: counts.all ?? 0 },
+    { id: 'live', label: 'Live Deployments', count: counts.live ?? 0 },
+    { id: 'fullstack', label: 'Full-Stack & Systems', count: counts.fullstack ?? 0 },
+    { id: 'ai', label: 'Applied AI & Research', count: counts.ai ?? 0 },
+    { id: 'tools', label: 'Web Apps & Tools', count: counts.tools ?? 0 },
   ] as const
 
   return (
@@ -36,7 +37,7 @@ export function ProjectFilters({ activeTab, onChange, searchQuery, onChangeSearc
               onClick={() => onChange(tab.id)}
             >
               <span>{tab.label}</span>
-              <span className={styles.filterCount}>0</span>
+              <span className={styles.filterCount}>{tab.count}</span>
             </button>
           )
         })}

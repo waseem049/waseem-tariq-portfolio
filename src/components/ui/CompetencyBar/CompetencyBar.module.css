@@ -1,0 +1,66 @@
+﻿.competencyBar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 12px);
+  width: 100%;
+}
+
+.competencyItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1, 4px);
+}
+
+.competencyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2, 8px);
+}
+
+.competencyLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+}
+
+.competencyValue {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.competencyTrack {
+  position: relative;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-line);
+  overflow: hidden;
+}
+
+.competencyFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: fillBar 1.2s var(--ease-out) forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes fillBar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .competencyFill {
+    animation: none;
+    transform: scaleX(1);
+  }
+}

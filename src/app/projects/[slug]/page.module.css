@@ -1,0 +1,429 @@
+/* ─────────────────────────────────────────────────────────────
+   CASE STUDY DETAIL PAGE — High-End Engineering Case Study
+   ───────────────────────────────────────────────────────────── */
+
+.casePage {
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: 96px;
+}
+
+/* ── HERO SECTION ── */
+.caseHero {
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-bg);
+  padding-block: clamp(40px, 5vw, 64px);
+  position: relative;
+}
+
+.breadcrumbRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-ink-3);
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.backLink:hover {
+  color: var(--color-accent);
+  transform: translateX(-2px);
+}
+
+.badgesRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.projectNumBadge {
+  font-size: 11px;
+  font-weight: 800;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+  border: 1px solid var(--color-accent-muted);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.heroContentGrid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+}
+
+.heroCopy {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryTag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-4);
+  margin-bottom: 10px;
+}
+
+.caseTitle {
+  margin: 0 0 16px;
+  font-size: clamp(32px, 4.5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--color-ink);
+}
+
+.caseLead {
+  font-size: 16px;
+  color: var(--color-ink-2);
+  line-height: 1.75;
+  margin: 0 0 28px;
+  max-width: 640px;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.heroArtWrap {
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  padding: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── TECH STACK STRIP ── */
+.stackStrip {
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-surface);
+  padding-block: 20px;
+}
+
+.stackStripInner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stackLabel {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-ink-4);
+  flex-shrink: 0;
+}
+
+.stackChips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.stackChip {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-ink-2);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-line);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+/* ── CASE BODY ── */
+.caseBody {
+  margin-top: clamp(48px, 6vw, 72px);
+}
+
+.caseLayoutGrid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: clamp(32px, 5vw, 64px);
+  align-items: start;
+}
+
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.caseCard {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-xs);
+  padding: clamp(24px, 4vw, 36px);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.caseCard:hover {
+  border-color: var(--color-line-2);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cardIcon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.cardHeading {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.cardText {
+  font-size: 15px;
+  color: var(--color-ink-2);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.highlightCard {
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-surface-2);
+}
+
+.highlightLiveLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.highlightLiveLink:hover {
+  text-decoration: underline;
+}
+
+/* ── SIDEBAR MATRIX ── */
+.sidebarMatrix {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.matrixCard {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-xs);
+  padding: 24px;
+}
+
+.matrixTitle {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-4);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.matrixList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.matrixItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.matrixLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-4);
+}
+
+.matrixValue {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.matrixLink {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.matrixLink:hover {
+  text-decoration: underline;
+}
+
+/* ── ADJACENT PROJECT NAVIGATION ── */
+.navSection {
+  margin-top: clamp(64px, 8vw, 96px);
+  border-top: 1px solid var(--color-line);
+  padding-top: 48px;
+}
+
+.navGrid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.navCard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.navCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.navCardNext {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.navDir {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+}
+
+.navName {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
+}
+
+.navCat {
+  font-size: 11px;
+  color: var(--color-ink-4);
+}
+
+.allProjectsBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface-2);
+  color: var(--color-ink);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.allProjectsBtn:hover {
+  background: var(--color-surface);
+  border-color: var(--color-ink-3);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .heroContentGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .caseLayoutGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .navGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .navCardNext {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .allProjectsBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .heroActions a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stackStripInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

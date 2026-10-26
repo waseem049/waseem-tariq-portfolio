@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeading } from "@/components/page-heading";
 import { ScrollAnimate } from "@/components/scroll-animate";
-import { profile } from "@/data/profile";
+import { ResearchPipeline } from "@/components/research/ResearchPipeline";
+import { PublicationCard } from "@/components/ui/PublicationCard";
+import { researchPapers, researchTopic, researchFocusAreas } from "@/data/research";
 
 export const metadata: Metadata = {
   title: "Research",
@@ -21,20 +23,33 @@ export default function ResearchPage() {
         />
       </ScrollAnimate>
 
-      <ScrollAnimate direction="up" delay={80}>
-        <article className="research-paper-card">
+      {/* Research Pipeline Visualization */}
+      <ScrollAnimate direction="up" delay={80} className="section-tight">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow"><span className="eyebrow-dot" />Research Pipeline</span>
+            <h2>How the system works</h2>
+          </div>
+        </div>
+        <ResearchPipeline />
+      </ScrollAnimate>
+
+      {/* Current Research Direction */}
+      <ScrollAnimate direction="up" delay={120} className="section-tight section-border-top">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow"><span className="eyebrow-dot" />Current Focus</span>
+            <h2>{researchTopic.title}</h2>
+          </div>
+        </div>
+        <div className="research-paper-card">
           <div className="paper-topline">
             <span>Research Paper · Computer Science & AI</span>
             <span className="status status-progress"><i />In progress</span>
           </div>
-          <p className="paper-kicker">Current Research Direction</p>
-          <h2>{profile.researchTopic}</h2>
+          <p className="paper-kicker">Active Research Direction</p>
           <p className="paper-summary">
-            The work is scoped as a research-and-implementation study for an AI-assisted
-            healthcare service-discovery component in a planned UHI-oriented application
-            architecture. The aim is to test whether semantic retrieval can improve
-            candidate relevance while deterministic checks help enforce explicit user
-            constraints.
+            {researchTopic.summary}
           </p>
           <div className="paper-meta-grid">
             <div>
@@ -50,102 +65,78 @@ export default function ResearchPage() {
               <strong>Synthetic service records</strong>
             </div>
           </div>
-        </article>
+        </div>
       </ScrollAnimate>
 
-      <section className="research-content-grid">
-        <ScrollAnimate direction="left" delay={120}>
-          <div className="research-text-column">
-            <span className="eyebrow">
-              <span className="eyebrow-dot" />
-              The Question
-            </span>
-            <h2>Relevance is not enough.</h2>
-            <p>
-              A result can sound relevant and still violate an explicit requirement.
-              The proposed study separates finding semantically related services from
-              validating non-negotiable constraints such as location or service attributes.
-            </p>
-            <p>
-              This is a prototype research direction, not a deployed clinical decision
-              system. No clinical outcomes or performance improvements are claimed at
-              this stage.
-            </p>
+      {/* Key Metrics */}
+      <ScrollAnimate direction="up" delay={160} className="section-tight section-border-top">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow"><span className="eyebrow-dot" />Key Metrics</span>
+            <h2>Target benchmarks</h2>
           </div>
-        </ScrollAnimate>
-
-        <ScrollAnimate direction="right" delay={180}>
-          <div className="research-text-column">
-            <span className="eyebrow">
-              <span className="eyebrow-dot" />
-              Proposed Method
-            </span>
-            <h2>Compare, validate, measure.</h2>
-            <ol className="research-steps">
-              <li>
-                <span>01</span>
-                <div>
-                  <strong>Prepare test data</strong>
-                  <p>Create synthetic healthcare-service records and a manually labelled query set.</p>
+        </div>
+        <div className="evaluation-panel">
+          <div className="evaluation-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))" }}>
+            {Object.entries(researchTopic.metrics).map(([key, value]) => (
+              <div key={key} style={{ textAlign: "center", padding: "16px" }}>
+                <div className="evaluation-number" style={{ fontSize: "28px", fontWeight: "800", color: "var(--color-accent)", marginBottom: "8px" }}>
+                  {value}
                 </div>
-              </li>
-              <li>
-                <span>02</span>
-                <div>
-                  <strong>Establish a baseline</strong>
-                  <p>Implement a keyword-based retrieval method for comparison.</p>
-                </div>
-              </li>
-              <li>
-                <span>03</span>
-                <div>
-                  <strong>Evaluate the approach</strong>
-                  <p>Compare retrieval/ranking quality and count constraint violations; document limitations.</p>
-                </div>
-              </li>
-              <li>
-                <span>04</span>
-                <div>
-                  <strong>Report the evidence</strong>
-                  <p>Publish methods and actual results only after the experiments are completed.</p>
-                </div>
-              </li>
-            </ol>
+                <h3 style={{ margin: "0 0 4px", fontSize: "14px", fontWeight: "600", color: "var(--color-ink)" }}>{key}</h3>
+              </div>
+            ))}
           </div>
-        </ScrollAnimate>
-      </section>
-
-      <ScrollAnimate direction="up" delay={200}>
-        <section className="evaluation-panel">
-          <span className="eyebrow">
-            <span className="eyebrow-dot" />
-            Planned Evaluation
-          </span>
-          <div className="evaluation-grid">
-            <div>
-              <span className="evaluation-number">01</span>
-              <h3>Retrieval quality</h3>
-              <p>Assess relevance and ranking against the manually labelled queries.</p>
-            </div>
-            <div>
-              <span className="evaluation-number">02</span>
-              <h3>Constraint violations</h3>
-              <p>Measure whether returned results break explicit constraints.</p>
-            </div>
-            <div>
-              <span className="evaluation-number">03</span>
-              <h3>Limitations &amp; uncertainty</h3>
-              <p>Record ambiguous requests, failure cases, and cases that need clarification.</p>
-            </div>
-          </div>
-        </section>
+        </div>
       </ScrollAnimate>
 
-      <ScrollAnimate direction="up" delay={240}>
+      {/* Focus Areas */}
+      <ScrollAnimate direction="up" delay={200} className="section-tight section-border-top">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow"><span className="eyebrow-dot" />Focus Areas</span>
+            <h2>What I'm exploring</h2>
+          </div>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "20px" }}>
+          {researchFocusAreas.map((area, index) => (
+            <div key={index} className="detail-card" style={{ padding: "24px", display: "flex", flexDirection: "column", gap: "12px" }}>
+              <div style={{ width: "40px", height: "40px", borderRadius: "var(--radius-md)", background: "var(--color-accent-subtle)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--color-accent)" }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  {area.icon === "search" && <> <circle cx="11" cy="11" r="8" /> <path d="m21 21-4.3-4.3" /> </>}
+                  {area.icon === "check-circle" && <> <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /> <path d="M22 4L12 14.01l-3-3" /> </>}
+                  {area.icon === "alert-triangle" && <> <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" /> <path d="M12 9v4" /> <path d="M12 17h.01" /> </>}
+                  {area.icon === "bar-chart" && <> <path d="M3 3v18h18" /> <path d="m19 9-5 5-4-4-3 3" /> </>}
+                </svg>
+              </div>
+              <h3 style={{ margin: 0, fontSize: "16px", fontWeight: "600", color: "var(--color-ink)" }}>{area.title}</h3>
+              <p style={{ margin: 0, fontSize: "13px", color: "var(--color-ink-3)", lineHeight: "1.6" }}>{area.description}</p>
+            </div>
+          ))}
+        </div>
+      </ScrollAnimate>
+
+      {/* Publications */}
+      <ScrollAnimate direction="up" delay={240} className="section-tight section-border-top">
+        <div className="section-head">
+          <div>
+            <span className="eyebrow"><span className="eyebrow-dot" />Publications</span>
+            <h2>Papers & preprints</h2>
+          </div>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "24px" }}>
+          {researchPapers.map((paper) => (
+            <PublicationCard key={paper.id} publication={paper} />
+          ))}
+        </div>
+      </ScrollAnimate>
+
+      {/* CTA */}
+      <ScrollAnimate direction="up" delay={280} className="section-tight">
         <div className="page-bottom-cta">
           <p>Interested in applied AI, reliable retrieval, or healthcare technology?</p>
           <Link className="text-link" href="/contact">
-            Start a conversation <span aria-hidden="true">↗</span>
+            Start a conversation <span aria-hidden="true">→</span>
           </Link>
         </div>
       </ScrollAnimate>

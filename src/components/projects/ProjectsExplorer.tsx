@@ -44,8 +44,16 @@ export function ProjectsExplorer() {
     })
   }, [projects, activeTab, searchQuery])
 
-  const liveCount = projects.filter((p) => Boolean(p.liveUrl)).length
+  const liveCount = projects.filter((p) => Boolean(p.liveUrl) || p.status === 'Complete & live' || p.status === 'Live').length
   const aiCount = projects.filter((p) => p.isAi).length
+
+  const counts = useMemo(() => ({
+    all: projects.length,
+    live: liveCount,
+    fullstack: projects.filter((p) => p.isFullstack).length,
+    ai: aiCount,
+    tools: projects.filter((p) => p.isTool).length,
+  }), [liveCount, aiCount])
 
   return (
     <div className={styles.explorer}>
@@ -57,6 +65,7 @@ export function ProjectsExplorer() {
         searchQuery={searchQuery}
         onChangeSearch={setSearchQuery}
         onFocusChange={setSearchFocused}
+        counts={counts}
       />
 
       {filteredProjects.length === 0 ? (
